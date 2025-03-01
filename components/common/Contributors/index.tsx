@@ -3,7 +3,7 @@ import Contributor from "@/components/common/Contributor";
 
 export default async function Contributors() {
     const data = await new Octokit().request("GET /repos/{owner}/{repo}/contributors", {
-        owner: "nolbo",
+        owner: "kbotdocs",
         repo: "kbotdocs.dev",
         headers: {
             "X-GitHub-Api-Version": "2022-11-28"
