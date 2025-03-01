@@ -61,6 +61,7 @@ import TypescriptIcon from "@/public/svg/TypescriptIcon.svg";
 import UploadIcon from "@/public/svg/UploadIcon.svg";
 import WarningIcon from "@/public/svg/WarningIcon.svg";
 import WarningFillIcon from "@/public/svg/WarningFillIcon.svg";
+import WindowsIcon from "@/public/svg/WindowsIcon.svg";
 
 interface IIcon extends SVGAttributes<HTMLOrSVGElement> {
     icon: Icons;
@@ -128,6 +129,7 @@ export default function Icon({icon, ...p}: IIcon) {
         UploadIcon: <UploadIcon {...p} />,
         WarningIcon: <WarningIcon {...p}  />,
         WarningFillIcon: <WarningFillIcon {...p}  />,
+        WindowsIcon: <WindowsIcon {...p} />
     };
 
     return (
