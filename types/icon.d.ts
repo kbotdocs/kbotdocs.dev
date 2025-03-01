@@ -59,4 +59,5 @@ type Icons =
     "TypescriptIcon" |
     "UploadIcon" |
     "WarningIcon" |
-    "WarningFillIcon";
+    "WarningFillIcon" |
+    "WindowsIcon";

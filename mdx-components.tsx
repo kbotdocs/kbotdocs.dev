@@ -3,6 +3,7 @@ import { Link } from "react-transition-progress/next";
 import Icon from "@/components/common/Icon";
 import CodeBlock from "@/components/common/CodeBlock";
 import Keycap from "@/components/common/Keycap";
+import Keys from "@/components/common/Keys";
 import InlineCode from "@/components/common/InlineCode";
 import Image from "next/image";
 import {Table, Thead, Tbody, Tr, Th, Td} from "@/components/common/Table";
@@ -38,7 +39,7 @@ export const mdxComponents: MDXComponents = {
         );
     },
     p({children}) {
-        return (<p className={"[&>svg]:relative [&>svg]:top-[-.05em] [&>svg]:z-0 [&>svg]:inline-block [&_.katex]:text-rel-base"}>{children}</p>)
+        return (<p className={"align-middle [&_.katex]:text-rel-base"}>{children}</p>)
     },
     Mark({children}) {
         return (<mark className={"bg-yellow text-gray-800 font-bold"}>{children}</mark>);
@@ -76,18 +77,18 @@ export const mdxComponents: MDXComponents = {
     },
     code({children, className}) {
         const sthlMatch = /language-(\w+)/.exec(className || "");
-        const keyMatch = /key-(\w+|\W+)/.exec(children as string || "");
+        const keyMatch = /key-(.*)/.exec(children as string || "");
         const content = String(children).replace(/\n$/, "");
 
-        return (
-            (sthlMatch) ?
-                <CodeBlock language={sthlMatch[1]} content={content}/>
-                :
-                (keyMatch) ?
-                    <Keycap keytext={keyMatch[1]}/>
-                    :
-                    <InlineCode>{children}</InlineCode>
-        );
+        if (sthlMatch) {
+            return (<CodeBlock language={sthlMatch[1]} content={content}/>);
+        }
+        if (keyMatch) {
+            const keys = keyMatch[1].split("$");
+            return (<Keys windows={keys[0] ? keys[0].split("_") : null} mac={keys[1] ? keys[1].split("_") : null}/>);
+        }
+
+        return (<InlineCode>{children}</InlineCode>);
     },
     InlineCode({children}) {
         return (<InlineCode>{children}</InlineCode>)  ;
