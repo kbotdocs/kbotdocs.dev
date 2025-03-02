@@ -23,7 +23,7 @@ export default function Tab({ label, className, children, ...p }: ITab) {
 
     return (
         <div className={`flex flex-col [&>*:nth-child(2)]:flex-1 w-full h-full ${className || ""}`} {...p}>
-            <div className={"flex w-full border-b-[1px] border-b-default"}>
+            <div className={"flex px-[8px] w-full border-b-[1px] border-b-default"}>
                 {
                     label.map((e, i) => (
                         <div
