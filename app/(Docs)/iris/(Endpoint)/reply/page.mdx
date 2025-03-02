@@ -1,0 +1,81 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+    metadataBase: new URL("https://kbotdocs.dev"),
+    title: "/reply - Iris",
+    openGraph: {
+        ...openGraph,
+        title: "/reply - Iris"
+    }
+}
+
+<Section>
+    # /reply
+
+    방에 텍스트 메시지 또는 이미지를 보냅니다.
+
+    <Table>
+        <colgroup>
+            <col width={"200px"}/>
+            <col />
+        </colgroup>
+        <Tbody>
+            <Tr>
+                <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
+                <Td>
+                    <Endpoint method={"POST"}>`/reply`</Endpoint>
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span className={"text-sm"}>**Content-Type**</span></Td>
+                <Td>
+                    `application/json`
+                </Td>
+            </Tr>
+        </Tbody>
+    </Table>
+</Section>
+<Section>
+    ## 요청
+
+    <Section>
+        ### 본문
+
+        ~~~json
+        {
+          "type": "text" | "image",
+          "room": "[CHAT_ROOM_ID]",
+          "data": "[MESSAGE_TEXT]"
+        }
+        ~~~
+        <Dl>
+            <Dt>`type`</Dt>
+            <Dd>
+                전송할 메시지의 타입입니다.
+                - `"text"`: 텍스트 메시지
+                - `"image"`: 이미지
+            </Dd>
+            <Dt>`room`</Dt>
+            <Dd>
+                메시지를 전송할 방의 Id입니다.
+            </Dd>
+            <Dt>`data`</Dt>
+            <Dd>
+                전송할 메시지입니다. `"type": "image"`일 경우, 전송할 이미지의 Base64 인코딩 값입니다.
+            </Dd>
+        </Dl>
+    </Section>
+    <Section>
+        ### 예제
+
+        - 텍스트 메시지 전송
+        ~~~bash
+        curl -X POST -H "Content-Type: application/json" -d '{"type": "text", "room": "1234567890", "data": "Send message"}' http://[YOUR_DEVICE_IP]:[bot_http_port]/reply
+        ~~~
+
+        - 이미지 전송
+        ~~~bash
+        curl -X POST -H "Content-Type: application/json" -d '{"type": "image", "room": "1234567890", "data": "[BASE64_ENCODED_IMAGE_DATA]"}' http://[YOUR_DEVICE_IP]:[bot_http_port]/reply
+        ~~~
+    </Section>
+</Section>

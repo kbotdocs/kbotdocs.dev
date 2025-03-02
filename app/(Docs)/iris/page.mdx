@@ -1,0 +1,107 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+    metadataBase: new URL("https://kbotdocs.dev"),
+    title: "Iris",
+    openGraph: {
+        ...openGraph,
+        title: "Iris"
+    }
+}
+
+<Section>
+    # Iris
+
+    [Iris](https://github.com/dolidolih/Iris)는 카카오톡과의 상호작용을 자동화하고, 데이터베이스에서 데이터를 추출하며, HTTP 서버를 통해 원격으로 제어하기 위한 서버 어플리케이션입니다. Java로 빌드되었으며 Android 기기에서 실행되도록 설계되었고, 시스템 서비스와 직접적인 데이터베이스 접근을 활용합니다.
+</Section>
+<Section>
+    ## Iris 시작하기
+
+    Iris를 시작하기 위한 설정이 필요합니다. [여기](/iris/get-started)를 참고해 셋업을 완료하세요.
+</Section>
+<Section>
+    ## HTTP API 엔드포인트
+
+    HTTP 서버는 `config.json`(`bot_http_port`)에 지정된 포트에서 수신 대기합니다.
+
+    <Table>
+        <Thead>
+            <Tr>
+                <Th colSpan={2}>HTTP API 엔드포인트</Th>
+            </Tr>
+        </Thead>
+        <Tbody>
+            <Tr>
+                <Td><span><RequestMethod method={"GET"}/></span></Td>
+                <Td>
+                    [`/config/dbrate`](/iris/config/dbrate) \
+                    데이터베이스 폴링 속도를 업데이트합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"GET"}/></span></Td>
+                <Td>
+                    [`/config/endpoint`](/iris/config/endpoint) \
+                    메시지 전달을 위한 웹 서버 엔드포인트를 업데이트합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"GET"}/></span></Td>
+                <Td>
+                    [`/config/info`](/iris/config/info) \
+                    현재 구성을 JSON 응답으로 검색합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"GET"}/></span></Td>
+                <Td>
+                    [`/config/sendrate`](/iris/config/sendrate) \
+                    메시지 전송 속도를 업데이트합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/decrypt`](/iris/decrypt) \
+                    메시지를 복호화합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/query`](/iris/query) \
+                    카카오톡 데이터베이스에 대한 SQL 쿼리를 실행합니다. 응답에서 암호화된 데이터 필드를 자동으로 복호화합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/reply`](/iris/reply) \
+                    방에 텍스트 메시지 또는 이미지를 보냅니다.
+                </Td>
+            </Tr>
+        </Tbody>
+    </Table>
+</Section>
+<Section>
+    ## 메시지 전달을 위한 API 참조
+
+    Iris가 카카오톡 데이터베이스에서 새 메시지를 감지하면 `config.json`에 구성된 `web_server_endpoint`로 POST 요청을 보냅니다. 요청 본문은 다음 구조의 JSON 객체입니다:
+
+    ~~~json
+    {
+      "msg": "[DECRYPTED_MESSAGE_CONTENT]", // 복호화된 메시지 텍스트
+      "room": "[CHAT_ROOM_NAME]",          // 채팅방 이름 또는 1:1 채팅의 경우 발신자 이름
+      "sender": "[SENDER_NAME]",          // 메시지 발신자 이름
+      "json": {                            // 'chat_logs' 테이블의 원시 데이터베이스 행을 JSON으로 표현
+        "_id": "...",
+        "chat_id": "...",
+        "user_id": "...",
+        "message": "[DECRYPTED_MESSAGE_CONTENT]", // 복호화된 메시지 내용, "msg" 필드와 동일
+        "attachment": "[DECRYPTED_ATTACHMENT_INFO]", // 복호화된 첨부 파일 정보 (있는 경우)
+        "v": "{\"enc\": 0, ...}",           // 원본 'v' 열 값 (JSON 형식)
+        // ... chat_logs 테이블의 기타 열 ...
+      }
+    }
+    ~~~
+</Section>

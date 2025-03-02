@@ -1,0 +1,60 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+    metadataBase: new URL("https://kbotdocs.dev"),
+    title: "/config/sendrate - Iris",
+    openGraph: {
+        ...openGraph,
+        title: "/config/sendrate - Iris"
+    }
+}
+
+<Section>
+    # /config/sendrate
+
+    메시지 전송 속도를 업데이트합니다. 이는 카카오톡으로 메시지를 보내는 최소 간격을 제어하여 메시지 전송 빈도를 관리하는 데 도움이 됩니다.
+
+    <Table>
+        <colgroup>
+            <col width={"200px"}/>
+            <col />
+        </colgroup>
+        <Tbody>
+            <Tr>
+                <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
+                <Td>
+                    <Endpoint method={"GET"}>`/config/sendrate`</Endpoint>
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span className={"text-sm"}>**Content-Type**</span></Td>
+                <Td>
+                    `-/-`
+                </Td>
+            </Tr>
+        </Tbody>
+    </Table>
+</Section>
+<Section>
+    ## 요청
+
+    <Section>
+        ### 쿼리
+
+        ~~~http
+        /config/sendrate?rate=[MESSAGE_SEND_INTERVAL_IN_MILLISECONDS]
+        ~~~
+
+        <Dl>
+            <Dt>`sendrate`</Dt>
+            업데이트할 메시지 전송 속도입니다.
+        </Dl>
+    </Section>
+    <Section>
+        ### 예제
+
+        ~~~bash
+        curl http://[YOUR_DEVICE_IP]:[bot_http_port]/config/sendrate?rate=200
+        ~~~
+    </Section>
+</Section>

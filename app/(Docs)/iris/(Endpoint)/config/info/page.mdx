@@ -1,0 +1,62 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+    metadataBase: new URL("https://kbotdocs.dev"),
+    title: "/config/info - Iris",
+    openGraph: {
+        ...openGraph,
+        title: "/config/info - Iris"
+    }
+}
+
+<Section>
+    # /config/info
+
+    현재 구성을 JSON 응답으로 검색합니다.
+
+    <Table>
+        <colgroup>
+            <col width={"200px"}/>
+            <col />
+        </colgroup>
+        <Tbody>
+            <Tr>
+                <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
+                <Td>
+                    <Endpoint method={"GET"}>`/config/info`</Endpoint>
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span className={"text-sm"}>**Content-Type**</span></Td>
+                <Td>
+                    `-/-`
+                </Td>
+            </Tr>
+        </Tbody>
+    </Table>
+</Section>
+<Section>
+    ## 요청
+
+    <Section>
+        ### 예제
+
+        ~~~bash
+        curl http://[YOUR_DEVICE_IP]:[bot_http_port]/config/info
+        ~~~
+    </Section>
+</Section>
+<Section>
+    ## 응답
+
+    ~~~json
+    {
+      "bot_name": "[YOUR_BOT_NAME]",
+      "bot_http_port": [PORT_FOR_HTTP_SERVER],
+      "web_server_endpoint": "[YOUR_WEB_SERVER_URL_FOR_MESSAGE_FORWARDING],
+      "db_polling_rate": [DATABASE_POLLING_INTERVAL_IN_MILLISECONDS],
+      "message_send_rate": [MESSAGE_SEND_INTERVAL_IN_MILLISECONDS],
+      "bot_id": [YOUR_KAKAO_TALK_USER_ID]
+    }
+    ~~~
+</Section>

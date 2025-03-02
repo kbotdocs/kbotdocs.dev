@@ -1160,6 +1160,25 @@ export const Docs: { [name: string]: DocCategory } = {
                     }
                 ]
             },
+            {
+                label: "Iris",
+                path: "/iris",
+                children: [
+                    {label: "시작하기", path: "/iris/get-started"},
+                    {
+                        label: "HTTP API 엔드포인트",
+                        children: [
+                            {label: "/config/dbrate", path: "/iris/config/dbrate"},
+                            {label: "/config/endpoint", path: "/iris/config/endpoint"},
+                            {label: "/config/info", path: "/iris/config/info"},
+                            {label: "/config/sendrate", path: "/iris/config/sendrate"},
+                            {label: "/decrypt", path: "/iris/decrypt"},
+                            {label: "/query", path: "/iris/query"},
+                            {label: "/reply", path: "/iris/reply"},
+                        ]
+                    }
+                ]
+            }
         ],
     },
     "learn": {
