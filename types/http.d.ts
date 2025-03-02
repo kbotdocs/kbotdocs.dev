@@ -1,0 +1,1 @@
+type RequestMethod = "GET" | "POST" | "PATCH" | "PUT" | "DELETE";

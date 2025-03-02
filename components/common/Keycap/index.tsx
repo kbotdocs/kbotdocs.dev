@@ -20,6 +20,10 @@ export default function Keycap({ keyText } : IKeycap): Key {
                 return "\u2325";
             case "mshift":
                 return "\u21e7";
+            case "control":
+                return "control";
+            case "return":
+                return "return";
             case "won":
                 return "\u20a9";
             case "arrowleft":

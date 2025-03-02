@@ -2,7 +2,6 @@ import type {MDXComponents} from "mdx/types";
 import { Link } from "react-transition-progress/next";
 import Icon from "@/components/common/Icon";
 import CodeBlock from "@/components/common/CodeBlock";
-import Keycap from "@/components/common/Keycap";
 import Keys from "@/components/common/Keys";
 import InlineCode from "@/components/common/InlineCode";
 import Image from "next/image";
@@ -15,6 +14,9 @@ import MileStone from "@/components/common/MileStone";
 import Details from "@/components/common/Details";
 import ArticleList from "@/components/common/ArticleList";
 import ArticleHeader from "@/components/common/ArticleHeader";
+import Tab from "@/components/common/Tab";
+import RequestMethod from "@/components/common/RequestMethod";
+import Endpoint from "@/components/common/Endpoint";
 
 export const mdxComponents: MDXComponents = {
     h2({children, ...p}) {
@@ -163,6 +165,15 @@ export const mdxComponents: MDXComponents = {
     },
     ArticleHeader({children, ...p}) {
         return (<ArticleHeader {...p}>{children}</ArticleHeader>);
+    },
+    Tab({children, ...p}) {
+        return (<Tab {...p}>{children}</Tab>);
+    },
+    RequestMethod({...p}) {
+        return (<RequestMethod {...p}/>);
+    },
+    Endpoint({children, ...p}) {
+        return (<Endpoint {...p}>{children}</Endpoint>);
     }
 };
 
