@@ -4,11 +4,9 @@ import { HTMLAttributes, TableHTMLAttributes, ThHTMLAttributes, TdHTMLAttributes
 
 export function Table({ children, className, ...rest }: TableHTMLAttributes<HTMLTableElement>) {
     return (
-        <article className={"overflow-auto"}>
-            <table className={`flex flex-col gap-[16px] min-w-[0] w-full border-collapse md:table ${className}`} { ...rest }>
-                {children}
-            </table>
-        </article>
+        <table className={`flex flex-col gap-[16px] min-w-[0] w-full border-collapse md:table ${className}`} { ...rest }>
+            {children}
+        </table>
     );
 }
 
