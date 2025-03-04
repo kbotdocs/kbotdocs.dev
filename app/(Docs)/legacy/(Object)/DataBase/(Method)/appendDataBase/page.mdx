@@ -19,27 +19,25 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    DataBase.appendDataBase(fileName: String, data: String);
+    DataBase.appendDataBase(fileName, data);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`fileName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"fileName"} type={"String"}>
                 내용을 이어 쓸 파일의 이름
-            </Dd>
-            <Dt>`data`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"data"} type={"String"}>
                 파일에 이어 쓸 내용
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값
 
-        `Boolean` - `fileNamee` 이름의 파일에 이어 쓴 후 해당 파일의 최종 내용을 반환합니다.
+        `Boolean` - `fileName` 이름의 파일에 이어 쓴 후 해당 파일의 최종 내용을 반환합니다.
     </Section>
 </Section>
 <Section>

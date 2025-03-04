@@ -19,24 +19,24 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.on(scriptName?: String);
+    Api.on();
+    Api.on(scriptName);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`scriptName?`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"scriptName"} type={"String"} defaultVal={"해당 메소드를 호출한 스크립트의 이름"} optional>
                 활성화할 스크립트의 이름
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값
 
-        `Boolean` - `scriptName?` 인자가 존재할 경우 `scriptName?` 이름의 스크립트가 존재하면 `true`, 존재하지 않으면 `false`를 반환합니다.
-        `scriptName?` 인자가 존재하지 않을 경우 무조건 `true`를 반환합니다.
+        `Boolean` - `scriptName` 인자가 존재할 경우 `scriptName` 이름의 스크립트가 존재하면 `true`, 존재하지 않으면 `false`를 반환합니다.
+        `scriptName` 인자가 존재하지 않을 경우 무조건 `true`를 반환합니다.
     </Section>
 </Section>
 <Section>

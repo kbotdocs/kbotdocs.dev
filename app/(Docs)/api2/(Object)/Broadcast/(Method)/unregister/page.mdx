@@ -19,23 +19,27 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Broadcast.unregister(broadcastName: String, task: (value: Any) => Any);
+    Broadcast.unregister(broadcastName, task);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`broadcastName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"broadcastName"} type={"String"}>
                 리스너를 제거할 브로드캐스트 이름
-            </Dd>
-            <Dt>`task`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"task"} type={"(value) => Any"}>
                 제거할 리스너
-                - `value`: 브로드캐스트을 통해 송출된 값
-            </Dd>
-        </Dl>
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"value"} type={"Any"}>
+                            브로드캐스트을 통해 송출된 값
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

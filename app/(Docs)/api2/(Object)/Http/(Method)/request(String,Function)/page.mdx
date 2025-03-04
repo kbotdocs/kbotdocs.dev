@@ -19,25 +19,33 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Http.request(url: String, callBack: (error: java.lang.Exception?, response: org.jsoup.Connection.Response?, doc: org.jsoup.nodes.Document?) => Any);
+    Http.request(url, callBack);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`url`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"url"} type={"String"}>
                 request를 보낼 서버의 URL
-            </Dd>
-            <Dt>`callback`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"callback"} type={"(error, response, doc) => Any"}>
                 request를 보낸 후 실행할 콜백 함수
-                - `error`: (에러 발생 시) 요청 중 발생한 에러를 나타내는 `java.lang.Exception`
-                - `response`: (요청 정상 처리 시) 요청에 대한 응답을 나타내는 [`org.jsoup.Connection.Response`](https://jsoup.org/apidocs/org/jsoup/Connection.Response.html)
-                - `doc`: (요청 정상 처리 시) 응답의 body에 대한 문서 형식의 값 [(`org.jsoup.nodes.Document`)](https://jsoup.org/apidocs/org/jsoup/nodes/Document.html)
-            </Dd>
-        </Dl>
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"error"} type={"java.lang.Exception?"}>
+                            (에러 발생 시) 요청 중 발생한 에러를 나타내는 `java.lang.Exception`
+                        </ParamItem>
+                        <ParamItem param={"response"} type={"org.jsoup.Connection.Response?"}>
+                            (요청 정상 처리 시) 요청에 대한 응답을 나타내는 [`org.jsoup.Connection.Response`](https://jsoup.org/apidocs/org/jsoup/Connection.Response.html)
+                        </ParamItem>
+                        <ParamItem param={"doc"} type={"org.jsoup.nodes.Document?"}>
+                            (요청 정상 처리 시) 응답의 body에 대한 문서 형식의 값
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

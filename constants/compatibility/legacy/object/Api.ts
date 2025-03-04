@@ -736,9 +736,9 @@ export const compatibility: { [name: string]: Compatibility } = {
             ]
         }
     },
-    "replyToID(BigInt,String,Boolean)": {
-        feature: "`replyToID(BigInt, String, Boolean)`",
-        url: "/legacy/Api/replyToID(BigInt,String,Boolean)",
+    "replyToID(BigInt,String,Boolean$)": {
+        feature: "`replyToID(BigInt, String, Boolean?)`",
+        url: "/legacy/Api/replyToID(BigInt,String,Boolean$)",
         status: {
             deprecated: false,
             experimental: false,
@@ -765,9 +765,9 @@ export const compatibility: { [name: string]: Compatibility } = {
             ]
         }
     },
-    "replyToID(String,String,Boolean)": {
-        feature: "`replyToID(String, String, Boolean)`",
-        url: "/legacy/Api/replyToID(String,String,Boolean)",
+    "replyToID(String,String,Boolean$)": {
+        feature: "`replyToID(String, String, Boolean?)`",
+        url: "/legacy/Api/replyToID(String,String,Boolean$)",
         status: {
             deprecated: false,
             experimental: false,

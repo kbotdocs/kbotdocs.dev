@@ -19,22 +19,21 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    bot.canReply(room: String, packageName?: String = null);
+    bot.canReply(room);
+    bot.canReply(room, packageName);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`room`</Dt>
-            <Dd>
-                메시지 발신 가능 여부를 확인할 방의 이름
-            </Dd>
-            <Dt>`packageName?`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"String"}>
+                삭제할 앱 데이터의 키
+            </ParamItem>
+            <ParamItem param={"packageName"} type={"String"} defaultVal={"`null`"} optional>
                 메시지 발신 가능 여부를 확인할 방이 소속한 메신저 앱의 패키지명
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

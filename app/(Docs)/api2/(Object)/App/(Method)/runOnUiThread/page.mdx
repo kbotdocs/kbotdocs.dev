@@ -19,24 +19,30 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    App.runOnUiThread(task: () => Any, onComplete: (error, result) => Any);
+    App.runOnUiThread(task, onComplete);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`task`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"task"} type={"() => Any"}>
                 UI쓰레드 상에서 실행할 함수
-            </Dd>
-            <Dt>`onComplete`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"onComplete"} type={"(error, result) => Any"}>
                 결과를 처리할 함수
-                - `error`: `task`함수 실행 도중 일어난 에러의 객체를 전달받는 인자
-                - `result`: `task`함수의 반환값을 전달받는 인자
-            </Dd>
-        </Dl>
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"error"} type={"org.mozilla.javascript.JavaScriptException"}>
+                            `task` 함수 실행 도중 일어난 에러의 객체를 전달받는 인자
+                        </ParamItem>
+                        <ParamItem param={"result"} type={"Any"}>
+                            `task` 함수의 반환값을 전달받는 인자
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

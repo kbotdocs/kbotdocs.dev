@@ -19,24 +19,25 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.showToast(content: String, length?: Number = android.widget.Toast.LENGTH_SHORT);
+    Api.showToast(content);
+    Api.showToast(content, length);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`content`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"content"} type={"String"}>
                 표시할 토스트 메시지의 내용
-            </Dd>
-            <Dt>`length?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"length"} type={"Number"} defaultVal={"`android.widget.Toast.LENGTH_SHORT = 0 (0x00000000)`"} optional>
                 토스트 메시지의 유지 시간을 나타내는 상수
-                - `android.widget.Toast.LENGTH_SHORT = 0 (0x00000000)`: 짧은 시간동안 출력
-                - `android.widget.Toast.LENGTH_LONG = 1 (0x00000001)`: 긴 시간동안 출력
-            </Dd>
-        </Dl>
+                <Details summary={"토스트 메시지의 유지 시간 (`android.widget.Toast`)"}>
+                    - `LENGTH_SHORT = 0 (0x00000000)`: 짧은 시간동안 출력
+                    - `LENGTH_LONG = 1 (0x00000001)`: 긴 시간동안 출력
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

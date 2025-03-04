@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    AppData.putInt(key: String, integer: Number);
+    AppData.putInt(key, integer);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`key`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"key"} type={"String"}>
                 쓸 앱 데이터의 키
-            </Dd>
-            <Dt>`integer`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"integer"} type={"Number"}>
                 `key`에 대한 `Number`(정수)형 데이터
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

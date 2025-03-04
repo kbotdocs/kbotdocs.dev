@@ -20,26 +20,23 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Bridge.setVariable(room: String, name: String, value: String);
+    Bridge.setVariable(room, name, value);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`room`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"String"}>
                 값을 저장할 `[[변수]]`에 대응하는 방 이름
-            </Dd>
-            <Dt>`name`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"name"} type={"String"}>
                 값을 저장할 `[[변수]]`의 이름
-            </Dd>
-            <Dt>`value`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"value"} type={"String"}>
                 저장할 값
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

@@ -3,15 +3,15 @@ import {openGraph} from "@/constants/metadata";
 
 export const metadata = {
     metadataBase: new URL("https://kbotdocs.dev"),
-    title: "Api.replyToID(String, String, Boolean) - 레거시 API",
+    title: "Api.replyToID(BigInt, String, Boolean) - 레거시 API",
     openGraph: {
         ...openGraph,
-        title: "Api.replyToID(String, String, Boolean) - 레거시 API"
+        title: "Api.replyToID(BigInt, String, Boolean) - 레거시 API"
     }
 }
 
 <Section>
-    # Api.replyToID(String, String, Boolean)
+    # Api.replyToID(BigInt, String, Boolean?)
 
     특정 ID로 식별되는 방에 메시지를 발신하고 방에 대한 세션의 존재 여부를 반환합니다. `hideToast`가 `true`일 경우 방의 세션 존재 여부를 토스트 메시지로 출력합니다.
 </Section>
@@ -19,26 +19,24 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.replyToID(roomId: String, message: String, hideToast: Boolean = false);
+    Api.replyToID(roomId, message);
+    Api.replyToID(roomId, message, hideToast);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`roomId`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"roomId"} type={"BigInt"}>
                 메시지를 발신할 방의 고유 ID
-            </Dd>
-            <Dt>`message`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"message"} type={"String"}>
                 발신할 메시지의 내용
-            </Dd>
-            <Dt>`hideToast`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"hideToast"} type={"Boolean"} defaultVal={"`false`"} optional>
                 메시지를 발신할 방의 세션 존재 여부를 토스트 메시지로 출력할 것인지의 여부
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값
@@ -49,5 +47,5 @@ export const metadata = {
 <Section>
     ## 앱 호환성
 
-    <AppCompat compats={compatibility["replyToID(String,String,Boolean)"]}/>
+    <AppCompat compats={compatibility["replyToID(BigInt,String,Boolean$)"]}/>
 </Section>

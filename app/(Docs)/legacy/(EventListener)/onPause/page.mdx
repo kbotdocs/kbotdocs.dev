@@ -19,7 +19,7 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    function onPause(activity: android.app.Activity) {
+    function onPause(activity) {
 
     }
     ~~~
@@ -27,12 +27,11 @@ export const metadata = {
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`activity`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"activity"} type={"android.app.Activity"}>
                 해당 이벤트가 발생했을 때의 액티비티입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

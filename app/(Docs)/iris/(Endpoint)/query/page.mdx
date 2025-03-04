@@ -54,16 +54,6 @@ export const metadata = {
                   "bind": ["[BINDING_VALUE_1]", "[BINDING_VALUE_2]", ...]
                 }
                 ~~~
-                <Dl>
-                    <Dt>`query`</Dt>
-                    <Dd>
-                        SQL 쿼리 문자열입니다.
-                    </Dd>
-                    <Dt>`bind`</Dt>
-                    <Dd>
-                        쿼리에 대한 선택적 바인딩입니다.
-                    </Dd>
-                </Dl>
             </Section>
             <Section>
                 ~~~json
@@ -81,22 +71,19 @@ export const metadata = {
                   ]
                 }
                 ~~~
-                <Dl>
-                    <Dt>`queries`</Dt>
-                    <Dd>
-                        실행할 쿼리의 배열입니다.
-                    </Dd>
-                    <Dt>`query`</Dt>
-                    <Dd>
-                        SQL 쿼리 문자열입니다.
-                    </Dd>
-                    <Dt>`bind`</Dt>
-                    <Dd>
-                        쿼리에 대한 선택적 바인딩입니다.
-                    </Dd>
-                </Dl>
             </Section>
         </Tab>
+        <ParamList caption={"본문 매개변수"}>
+            <ParamItem param={"queries"} type={"Query[]"}>
+                실행할 쿼리의 배열입니다.
+            </ParamItem>
+            <ParamItem param={"query"} type={"string"}>
+                SQL 쿼리 문자열입니다.
+            </ParamItem>
+            <ParamItem param={"bind"} type={"string[]"}>
+                쿼리에 대한 선택적 바인딩입니다.
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 예제

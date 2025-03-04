@@ -61,7 +61,7 @@ export const metadata = {
             </Thead>
             <Tbody>
                 <Tr>
-                    <Td><span>`String`</span></Td>
+                    <Td><span>`string`</span></Td>
                     <Td>
                         `bot_name` \
                         봇의 이름입니다. 봇을 식별하기 위해 사용됩니다.
@@ -75,7 +75,7 @@ export const metadata = {
                     </Td>
                 </Tr>
                 <Tr>
-                    <Td><span>`String`</span></Td>
+                    <Td><span>`string`</span></Td>
                     <Td>
                         `web_server_endpoint` \
                         새로운 카카오톡 메시지를 수신할 웹 서버의 URL입니다. (예: `http://172.17.0.2:5000/db for IrisPy`).
@@ -85,7 +85,7 @@ export const metadata = {
                     <Td><span>`int`</span></Td>
                     <Td>
                         `db_polling_rate` \
-                        (선택 사항) 데이터베이스 변경 사항을 확인하는 간격(밀리초; ms)입니다(예: `200`). 기본값은 `100`입니다.
+                        (선택 사항) 데이터베이스 변경 사항을 확인하는 지연 시간(밀리초; ms)입니다(예: `200`). 기본값은 `100`입니다.
                         <Noti type={"warning"}>
                             값이 낮을수록 데이터베이스의 변경 사항을 더 빈번하게 확인해 CPU 사용량이 증가할 수 있습니다.
                         </Noti>

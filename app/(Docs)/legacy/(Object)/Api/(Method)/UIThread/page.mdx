@@ -19,24 +19,31 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.UIThread(func: () => Any?, onComplete?: (error: java.lang.Throwable?, result: Any?) => Any?);
+    Api.UIThread(func);
+    Api.UIThread(func, onComplete);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`func`</Dt>
-            <Dd>
-                UI 쓰레드 상에서 실행할 함수
-            </Dd>
-            <Dt>`onComplete?`</Dt>
-            <Dd>
-                `func` 함수의 결과를 처리할 함수
-                - `error`: `func` 함수의 실행 도중 일어난 에러에 대한 `java.lang.Throwable`
-                - `result`: `func` 함수의 반환값
-            </Dd>
-        </Dl>
+        <ParamList>
+            <ParamItem param={"func"} type={"() => Any"}>
+                UI쓰레드 상에서 실행할 함수
+            </ParamItem>
+            <ParamItem param={"onComplete"} type={"(error, result) => Any"} optional>
+                결과를 처리할 함수
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"error"} type={"java.lang.Throwable"}>
+                            `func` 함수 실행 도중 일어난 에러의 객체를 전달받는 인자
+                        </ParamItem>
+                        <ParamItem param={"result"} type={"Any"}>
+                            `func` 함수의 반환값을 전달받는 인자
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

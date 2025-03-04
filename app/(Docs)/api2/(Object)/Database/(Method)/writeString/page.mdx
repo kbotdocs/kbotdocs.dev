@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Database.writeString(fileName: String, str: String);
+    Database.writeString(fileName, str);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`fileName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"fileName"} type={"String"}>
                 내용을 덮어쓰거나 새로 생성할 파일의 이름
-            </Dd>
-            <Dt>`str`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"str"} type={"String"}>
                 파일 내용으로 저장할 문자열
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

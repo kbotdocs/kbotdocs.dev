@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Security.ariaDecodeRaw(key: String, raw: org.mozilla.javascript.NativeArray);
+    Security.ariaDecodeRaw(key, raw);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`key`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"key"} type={"String"}>
                 ARIA 복호화를 위한 키
-            </Dd>
-            <Dt>`raw`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"raw"} type={"org.mozilla.javascript.NativeArray"}>
                 `org.mozilla.javascript.NativeArray` 형식의 복호화할 미가공 데이터
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

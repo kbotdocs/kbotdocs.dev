@@ -19,26 +19,24 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.makeNoti(title: String, content: String, id?: Number = 0);
+    Api.makeNoti(title, content);
+    Api.makeNoti(title, content, id);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`title`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"title"} type={"String"}>
                 알림의 제목
-            </Dd>
-            <Dt>`content`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"content"} type={"String"}>
                 알림의 내용
-            </Dd>
-            <Dt>`id?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"id"} type={"Number"} defaultVal={"`0`"} optional>
                 알림의 ID
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

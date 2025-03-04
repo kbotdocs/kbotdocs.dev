@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    BotManager.setPower(botName: String, power: Boolean);
+    BotManager.setPower(botName, power);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`botName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"botName"} type={"String"}>
                 활성화 여부를 제어할 `Bot` 객체의 이름
-            </Dd>
-            <Dt>`power`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"power"} type={"Boolean"}>
                 `Bot` 객체의 활성화 여부
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

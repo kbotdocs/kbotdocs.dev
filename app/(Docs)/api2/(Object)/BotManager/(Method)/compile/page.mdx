@@ -19,22 +19,21 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    BotManager.compile(botName: String, throwOnError?: Boolean = false);
+    BotManager.compile(botName);
+    BotManager.compile(botName, throwOnError);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`botName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"botName"} type={"String"}>
                 컴파일할 `Bot`의 이름
-            </Dd>
-            <Dt>`throwOnError?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"throwOnError"} type={"Boolean"} defaultVal={"`false`"} optional>
                 컴파일 에러 시 에러 throw 여부
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

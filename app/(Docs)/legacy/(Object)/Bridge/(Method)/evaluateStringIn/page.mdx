@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Bridge.evaluateStringIn(scriptName: String, src: String);
+    Bridge.evaluateStringIn(scriptName, src);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`scriptName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"scriptName"} type={"String"}>
                 JavaScript 코드를 실행할 스크립트의 이름
-            </Dd>
-            <Dt>`src`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"src"} type={"String"}>
                 문자열로 표현된 JavaScript 코드
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

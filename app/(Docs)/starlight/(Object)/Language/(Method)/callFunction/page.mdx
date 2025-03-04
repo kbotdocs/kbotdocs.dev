@@ -18,26 +18,23 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    language.callFunction(scope: Any, functionName: String, args: Any[]);
+    language.callFunction(scope, functionName, args);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`scope`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"Any"}>
                 사용할 스코프
-            </Dd>
-            <Dt>`functionName`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"functionName"} type={"String"}>
                 호출할 함수의 이름
-            </Dd>
-            <Dt>`args`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"args"} type={"Any[]"}>
                 호출할 함수에게 전달할 인자
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

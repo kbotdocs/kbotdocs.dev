@@ -19,22 +19,21 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Utils.getWebText2(url: String, encoding?: String = "UTF-8");
+    Utils.getWebText2(url);
+    Utils.getWebText2(url, encoding);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`url`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"url"} type={"String"}>
                 GET request를 보낼 서버의 URL
-            </Dd>
-            <Dt>`encoding?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"encoding"} type={"String"} defaultVal={"`\"UTF-8\"`"} optional>
                 요청에 대한 인코딩 형식
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

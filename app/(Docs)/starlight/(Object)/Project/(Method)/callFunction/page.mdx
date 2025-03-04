@@ -24,20 +24,23 @@ export const metadata = {
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`name`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"name"} type={"String"}>
                 호출할 함수의 이름
-            </Dd>
-            <Dt>`args`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"args"} type={"Any[]"}>
                 호출할 함수에게 전달할 인자
-            </Dd>
-            <Dt>`onException`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"onException"} type={"(throwable) => Any"}>
                 예외가 발생할 때 호출할 콜백 함수
-                - `throwable`: 발생한 예외에 대한 `java.lang.Throwable` 값
-            </Dd>
-        </Dl>
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"throwable"} type={"java.lang.Throwable"}>
+                            발생한 예외에 대한 `java.lang.Throwable` 값
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>

@@ -19,7 +19,7 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    function onLoaded(ctx: android.context.Context) {
+    function onLoaded(ctx) {
 
 }
     ~~~
@@ -27,12 +27,11 @@ export const metadata = {
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`ctx`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"ctx"} type={"android.context.Context"}>
                 액티비티의 Context(컨텍스트)입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

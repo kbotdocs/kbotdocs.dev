@@ -18,17 +18,21 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Notification.update(title?: String, message?: String);
+    Notification.update();
+    Notification.update(title);
+    Notification.update(title, message);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`title?`</Dt>
-            <Dd>수정할 제목</Dd>
-            <Dt>`message?`</Dt>
-            <Dd>수정할 문자열</Dd>
-        </Dl>
+        <ParamList>
+            <ParamItem param={"title"} type={"String"} defaultVal={"`null`"} optional>
+                수정할 제목
+            </ParamItem>
+            <ParamItem param={"message"} type={"String"} defaultVal={"`null`"} optional>
+                수정할 문자열
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>

@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Security.rc4Encode(key: String, value: String);
+    Security.rc4Encode(key, value);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`key`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"key"} type={"String"}>
                 RC4 암호화를 위한 키
-            </Dd>
-            <Dt>`value`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"value"} type={"String"}>
                 암호화할 값
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

@@ -19,7 +19,7 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    function onNotificationPosted(statusBarNotification: android.service.notification.StatusBarNotification, sessionManager: SessionManager) {
+    function onNotificationPosted(statusBarNotification, sessionManager) {
 
     }
     ~~~
@@ -27,16 +27,14 @@ export const metadata = {
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`statusBarNotification`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"statusBarNotification"} type={"android.service.notification.StatusBarNotification"}>
                 알림에 관한 정보가 담긴 [`android.service.notification.StatusBarNotification`](https://developer.android.com/reference/android/service/notification/StatusBarNotification)입니다.
-            </Dd>
-            <Dt>`sessionManager`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"sessionManager"} type={"SessionManager"}>
                 앱이 공식적으로 지원하지 않는 메신저에 사용하기 위한 [`SessionManager`](/legacy/SessionManager) 객체입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

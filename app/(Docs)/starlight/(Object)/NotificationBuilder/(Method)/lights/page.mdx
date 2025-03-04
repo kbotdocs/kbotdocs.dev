@@ -18,26 +18,23 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    NotificationBuilder.lights(argb: Number, onMs: Number, offMs: Number);
+    NotificationBuilder.lights(argb, onMs, offMs);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`argb`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"argb"} type={"Number"}>
                 설정할 LED 색 (`0xAARRGGBB` 형식, 예: `0xFFFFFFFF`)
-            </Dd>
-            <Dt>`onMs`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"onMs"} type={"Number"}>
                 LED가 켜진 채로 유지될 시간(밀리초; ms)
-            </Dd>
-            <Dt>`offMs`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"offMs"} type={"Number"}>
                 LED가 꺼진 채로 유지될 시간(밀리초; ms)
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

@@ -20,20 +20,19 @@ export const metadata = {
 
     [`Bot.addListener()`](/api2/Bot/addListener)를 이용해 이벤트에 대한 리스너를 추가할 수 있습니다. [`Event.Activity.START`](/api2/Event/Activity/START)를 이용해 이벤트 이름을 전달할 수도 있습니다.
     ~~~js
-    bot.addListener("activityStart", (activity: android.app.Activity) => {});
+    bot.addListener("activityStart", (activity) => {});
     // 또는
-    bot.addListener(Event.Activity.START, (activity: android.app.Activity) => {});
+    bot.addListener(Event.Activity.START, (activity) => {});
     ~~~
 
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`activity`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"activity"} type={"android.app.Activity"}>
                 해당 이벤트가 발생했을 때의 액티비티입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

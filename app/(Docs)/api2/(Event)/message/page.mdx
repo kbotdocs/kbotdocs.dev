@@ -20,20 +20,19 @@ export const metadata = {
 
     [`Bot.addListener()`](/api2/Bot/addListener)를 이용해 이벤트에 대한 리스너를 추가할 수 있습니다. [`Event.MESSAGE`](/api2/Event/MESSAGE)를 이용해 이벤트 이름을 전달할 수도 있습니다.
     ~~~js
-    bot.addListener("message", (msg: Message) => {});
+    bot.addListener("message", (msg) => {});
     // 또는
-    bot.addListener(Event.MESSAGE, (msg: Message) => {});
+    bot.addListener(Event.MESSAGE, (msg) => {});
     ~~~
 
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`msg`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"msg"} type={"Message"}>
                 발신된 메시지에 대한 정보를 담고 있는 [`Message`](/api2/Message) 객체입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

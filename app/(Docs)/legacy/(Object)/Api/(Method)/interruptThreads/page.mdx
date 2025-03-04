@@ -20,18 +20,18 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.interruptThreads(scriptName?: String);
+    Api.interruptThreads();
+    Api.interruptThreads(scriptName);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`scriptName?`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"scriptName"} type={"String"} defaultVal={"해당 메소드를 호출한 스크립트의 이름"} optional>
                 쓰레드에 `interrupt` 요청을 보낼 스크립트 이름
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

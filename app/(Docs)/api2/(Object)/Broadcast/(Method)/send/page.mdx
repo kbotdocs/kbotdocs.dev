@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Broadcast.send(broadcastName: String, value: Any);
+    Broadcast.send(broadcastName, value);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`broadcastName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"broadcastName"} type={"String"}>
                 전송할 브로드캐스트 이름
-            </Dd>
-            <Dt>`value`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"value"} type={"Any"}>
                 브로드캐스트로 송출할 값
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

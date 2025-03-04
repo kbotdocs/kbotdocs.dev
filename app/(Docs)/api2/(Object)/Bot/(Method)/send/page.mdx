@@ -19,26 +19,24 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    bot.send(room: String, msg: String, packageName?: String = null);
+    bot.send(room, msg);
+    bot.send(room, msg, packageName);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`room`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"String"}>
                 메시지를 보낼 방 이름
-            </Dd>
-            <Dt>`msg`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"msg"} type={"String"}>
                 보낼 메시지의 내용
-            </Dd>
-            <Dt>`packageName?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"packageName"} type={"String"} optional>
                 메시지를 보낼 메신저 앱의 패키지명
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

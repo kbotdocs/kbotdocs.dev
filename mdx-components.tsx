@@ -17,6 +17,9 @@ import ArticleHeader from "@/components/common/ArticleHeader";
 import Tab from "@/components/common/Tab";
 import RequestMethod from "@/components/common/RequestMethod";
 import Endpoint from "@/components/common/Endpoint";
+import Param from "@/components/common/Param";
+import ParamList from "@/components/common/ParamList";
+import ParamItem from "@/components/common/ParamItem";
 
 export const mdxComponents: MDXComponents = {
     h2({children, ...p}) {
@@ -174,6 +177,15 @@ export const mdxComponents: MDXComponents = {
     },
     Endpoint({children, ...p}) {
         return (<Endpoint {...p}>{children}</Endpoint>);
+    },
+    Param({children, ...p}){
+        return (<Param {...p}>{children}</Param>);
+    },
+    ParamList({children, ...p}) {
+        return (<ParamList {...p}>{children}</ParamList>);
+    },
+    ParamItem({children, ...p}) {
+        return (<ParamItem {...p}>{children}</ParamItem>);
     }
 };
 

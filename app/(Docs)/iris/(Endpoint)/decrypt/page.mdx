@@ -48,20 +48,17 @@ export const metadata = {
           "user_id": [USER_ID]
         }
         ~~~
-        <Dl>
-            <Dt>`enc`</Dt>
-            <Dd>
+        <ParamList caption={"본문 매개변수"}>
+            <ParamItem param={"enc"} type={"int"}>
                 암호화 유형입니다. 데이터베이스에서 가져온 정수입니다.
-            </Dd>
-            <Dt>`b64_ciphertext`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"b64_ciphertext"} type={"string"}>
                 Base64 인코딩된 암호화 메시지입니다.
-            </Dd>
-            <Dt>`user_id`</Dt>
-            <Dd>
-                (선택 사항) 사용자 ID입니다. 기본값은 `config.json`의 `bot_id`입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+            <ParamItem param={"user_id"} type={"long"} defaultVal={"`config.json`의 `bot_id`"} optional>
+                사용자 ID입니다.
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 예제

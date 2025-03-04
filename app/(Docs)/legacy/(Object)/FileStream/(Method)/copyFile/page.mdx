@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    FileStream.copyFile(path1: String, path2: String);
+    FileStream.copyFile(path1, path2);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`path1`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"path1"} type={"String"}>
                 복사할 원본 파일의 경로
-            </Dd>
-            <Dt>`path2`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"path2"} type={"String"}>
                 복사본의 경로
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

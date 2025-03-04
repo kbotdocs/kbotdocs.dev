@@ -20,22 +20,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Bridge.getVariable(room: String, name: String);
+    Bridge.getVariable(room, name);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`room`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"String"}>
                 `[[변수]]`의 값에 대응하는 방 이름
-            </Dd>
-            <Dt>`name`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"name"} type={"String"}>
                 `[[변수]]`의 이름
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

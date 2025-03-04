@@ -12,7 +12,7 @@ export const metadata = {
 <Section>
     # /config/sendrate
 
-    메시지 전송 속도를 업데이트합니다. 이는 카카오톡으로 메시지를 보내는 최소 간격을 제어하여 메시지 전송 빈도를 관리하는 데 도움이 됩니다.
+    메시지 전송 지연 시간을 업데이트합니다.
 
     <Table>
         <colgroup>
@@ -45,10 +45,11 @@ export const metadata = {
         /config/sendrate?rate=[MESSAGE_SEND_INTERVAL_IN_MILLISECONDS]
         ~~~
 
-        <Dl>
-            <Dt>`sendrate`</Dt>
-            업데이트할 메시지 전송 속도입니다.
-        </Dl>
+        <ParamList caption={"쿼리 매개변수"}>
+            <ParamItem param={"sendrate"} type={"int"}>
+                업데이트할 메시지 전송 지연 시간(밀리초; ms)입니다.
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 예제

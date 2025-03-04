@@ -18,7 +18,7 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    function onMessage(event: Message) {
+    function onMessage(event) {
 
     }
     ~~~
@@ -26,11 +26,10 @@ export const metadata = {
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`event`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"event"} type={"Message"}>
                 발신된 메시지에 대한 정보를 담고 있는 [`Message`](/starlight/Message) 객체입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>

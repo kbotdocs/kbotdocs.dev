@@ -106,7 +106,7 @@ export const metadata = {
                 <Td><span>`String`</span></Td>
                 <Td>
                     [`getWebText`](/legacy/Utils/getWebText)`(url: String, removeTags?: Boolean = false)` \
-                    [`jsoup`](https://jsoup.org/)을 이용해 `url`에 동기 GET request를 보냅니다. 요청에 대한 응답을 문자열로 반환합니다. `removeTags?`가 `true`일 경우 HTML 태그를 삭제한 응답을 문자열로 반환합니다.
+                    [`jsoup`](https://jsoup.org/)을 이용해 `url`에 동기 GET request를 보냅니다. 요청에 대한 응답을 문자열로 반환합니다. `removeTags`가 `true`일 경우 HTML 태그를 삭제한 응답을 문자열로 반환합니다.
                 </Td>
             </Tr>
             <Tr>
@@ -126,8 +126,8 @@ export const metadata = {
             <Tr>
                 <Td><span>`Boolean`</span></Td>
                 <Td>
-                    [`isUndefined`](/legacy/Utils/isUndefined)`(value?: Any?)` \
-                    `value?`가 `undefined`인지의 여부를 반환합니다.
+                    [`isUndefined`](/legacy/Utils/isUndefined)`(value: Any?)` \
+                    `value`가 `undefined`인지의 여부를 반환합니다.
                 </Td>
             </Tr>
             <Tr>

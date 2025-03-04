@@ -19,22 +19,21 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    Api.markAsRead(room: String, packageName?: String);
+    Api.markAsRead(room);
+    Api.markAsRead(room, packageName);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`room`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"String"}>
                 메시지를 읽음 처리할 방의 이름
-            </Dd>
-            <Dt>`packageName?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"packageName"} type={"String"} optional>
                 메시지를 읽음 처리할 메신저 앱의 패키지명
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

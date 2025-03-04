@@ -19,22 +19,21 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    sessionManager.bindSession(room: String, action?: android.app.Notification.Action);
+    sessionManager.bindSession(room);
+    sessionManager.bindSession(room, action);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`room`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"room"} type={"String"}>
                 메시지를 보낼 메신저 앱 내의 방
-            </Dd>
-            <Dt>`action?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"action"} type={"android.app.Notification.Action"} optional>
                 메시지 전송 구현을 위한 `android.app.Notification.Action`값
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

@@ -52,12 +52,12 @@ export const Docs: { [name: string]: DocCategory } = {
                                             {label: "reload()", path: "/legacy/Api/reload"},
                                             {label: "replyRoom()", path: "/legacy/Api/replyRoom"},
                                             {
-                                                label: "replyToID(BigInt, String, Boolean)",
-                                                path: "/legacy/Api/replyToID(BigInt,String,Boolean)"
+                                                label: "replyToID(BigInt, String, Boolean?)",
+                                                path: "/legacy/Api/replyToID(BigInt,String,Boolean$)"
                                             },
                                             {
-                                                label: "replyToID(String, String, Boolean)",
-                                                path: "/legacy/Api/replyToID(String,String,Boolean)"
+                                                label: "replyToID(String, String, Boolean?)",
+                                                path: "/legacy/Api/replyToID(String,String,Boolean$)"
                                             },
                                             {label: "showToast()", path: "/legacy/Api/showToast"},
                                             {label: "UIThread()", path: "/legacy/Api/UIThread"},

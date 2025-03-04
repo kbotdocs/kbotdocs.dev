@@ -18,19 +18,24 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    NotificationBuilder.onDismiss(callback: (id: Number) => Any?);
+    NotificationBuilder.onDismiss(callback);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`callback`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"callback"} type={"(id) => Any?"}>
                 알림이 상단바에서 제거될 때 호출될 콜백 함수
-                - `id`: 알림의 ID
-            </Dd>
-        </Dl>
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"id"} type={"Number"}>
+                            알림의 ID
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
     <Section>
         ### 반환값

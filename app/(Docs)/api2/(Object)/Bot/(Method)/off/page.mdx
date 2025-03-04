@@ -19,23 +19,28 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    bot.off(eventName: String, listener?: (arg1?: Any, arg2?: Any, ... argN?: Any) => Any);
+    bot.off(eventName);
+    bot.off(eventName, listener);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`eventName`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"eventName"} type={"String"}>
                 리스너를 제거할 이벤트명
-            </Dd>
-            <Dt>`listener?`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"listener"} type={"(arg1, arg2, ..., argN) => Any"} optional>
                 제거할 이벤트 리스너
-                - `arg1?, arg2?, ... argN?`: `eventName` 이벤트에 의해 주어지는 인자에 대한 매개변수입니다. API2의 이벤트는 [여기](/api2#이벤트)를 참고하세요.
-            </Dd>
-        </Dl>
+                <Details summary={"매개변수"}>
+                    <ParamList>
+                        <ParamItem param={"arg1, arg2, ..., argN"} type={"Any"}>
+                            `eventName` 이벤트에 의해 주어지는 인자에 대한 매개변수입니다. API2의 이벤트는 [여기](/api2#이벤트)를 참고하세요.
+                        </ParamItem>
+                    </ParamList>
+                </Details>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

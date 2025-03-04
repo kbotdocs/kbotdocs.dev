@@ -19,22 +19,20 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    replier.replyDelayed(msg: String, delay: Number);
+    replier.replyDelayed(msg, delay);
     ~~~
 
     <Section>
         ### 매개변수
 
-        <Dl>
-            <Dt>`msg`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"msg"} type={"String"}>
                 일정 시간 후 발신할 메시지의 내용
-            </Dd>
-            <Dt>`delay`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"delay"} type={"Number"}>
                 지연할 시간(밀리초; ms)
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>

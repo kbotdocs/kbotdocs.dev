@@ -19,7 +19,7 @@ export const metadata = {
     ## 구문
 
     ~~~js
-    function onCreate(savedInstanceState: android.os.Bundle, activity: android.app.Activity) {
+    function onCreate(savedInstanceState, activity) {
 
     }
     ~~~
@@ -27,16 +27,14 @@ export const metadata = {
     <Section>
         ### 인자
 
-        <Dl>
-            <Dt>`savedInstanceState`</Dt>
-            <Dd>
+        <ParamList>
+            <ParamItem param={"savedInstanceState"} type={"android.os.Bundle"}>
                 스크립트 액티비티의 `onCreate`의 인자 `savedInstanceState`입니다.
-            </Dd>
-            <Dt>`activity`</Dt>
-            <Dd>
+            </ParamItem>
+            <ParamItem param={"activity"} type={"android.app.Activity"}>
                 해당 이벤트가 발생했을 때의 액티비티입니다.
-            </Dd>
-        </Dl>
+            </ParamItem>
+        </ParamList>
     </Section>
 </Section>
 <Section>
