@@ -8,7 +8,7 @@ interface DetailsProps extends HTMLAttributes<HTMLDetailsElement> {
 
 export default function Details({children, summary, ...p}: DetailsProps) {
     return (
-        <details className={"border-y border-y-layer1 overflow-clip"}>
+        <details className={"rounded-lg border border-default overflow-clip"}>
             <summary className={"flex justify-between items-center gap-[8px] p-[8px_12px] [details[open]_&]:border-b [details[open]_&]:border-b-layer1"}>
                 <MDXClient source={summary} />
                 <Icon icon={"ArrowIcon"} className={"w-[16px] h-[16px] stroke-default [details[open]_&]:rotate-[90deg]"} />
