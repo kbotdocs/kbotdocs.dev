@@ -24,7 +24,21 @@ export const metadata: Metadata = {
             template: "%s | KBotDocs"
         },
         url: "https://kbotdocs.dev/",
-    }
+    },
+    icons: [
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            url: "/metadata/favicon_light.ico",
+            media: '(prefers-color-scheme: light)',
+        },
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            url: "/metadata/favicon_dark.ico",
+            media: '(prefers-color-scheme: dark)',
+        }
+    ]
 };
 
 const open_sans = Open_Sans({
