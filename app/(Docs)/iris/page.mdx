@@ -101,7 +101,7 @@ export const metadata = {
 <Section>
     ## 메시지 전달을 위한 API 참조
 
-    Iris가 카카오톡 데이터베이스에서 새 메시지를 감지하면 `config.json`에 구성된 `web_server_endpoint`로 POST 요청을 보냅니다. 요청 본문은 다음 구조의 JSON 객체입니다:
+    Iris가 카카오톡 데이터베이스에서 새 메시지를 감지하면 `/config` 또는 `/config/endpoint`를 통해 구성된 `web_server_endpoint`로 POST 요청을 보냅니다. 요청 본문은 다음 구조의 JSON 객체입니다:
 
     ~~~json
     {
