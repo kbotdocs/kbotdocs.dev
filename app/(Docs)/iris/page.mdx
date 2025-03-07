@@ -20,9 +20,7 @@ export const metadata = {
     Iris를 시작하기 위한 설정이 필요합니다. [여기](/iris/get-started)를 참고해 셋업을 완료하세요.
 </Section>
 <Section>
-    ## HTTP API 엔드포인트
-
-    HTTP 서버는 `config.json`(`bot_http_port`)에 지정된 포트에서 수신 대기합니다.
+    ## 엔드포인트
 
     <Table>
         <Thead>
@@ -31,34 +29,6 @@ export const metadata = {
             </Tr>
         </Thead>
         <Tbody>
-            <Tr>
-                <Td><span><RequestMethod method={"GET"}/></span></Td>
-                <Td>
-                    [`/config/dbrate`](/iris/config/dbrate) \
-                    데이터베이스 폴링 속도를 업데이트합니다.
-                </Td>
-            </Tr>
-            <Tr>
-                <Td><span><RequestMethod method={"GET"}/></span></Td>
-                <Td>
-                    [`/config/endpoint`](/iris/config/endpoint) \
-                    메시지 전달을 위한 웹 서버 엔드포인트를 업데이트합니다.
-                </Td>
-            </Tr>
-            <Tr>
-                <Td><span><RequestMethod method={"GET"}/></span></Td>
-                <Td>
-                    [`/config/info`](/iris/config/info) \
-                    현재 구성을 JSON 응답으로 검색합니다.
-                </Td>
-            </Tr>
-            <Tr>
-                <Td><span><RequestMethod method={"GET"}/></span></Td>
-                <Td>
-                    [`/config/sendrate`](/iris/config/sendrate) \
-                    메시지 전송 속도를 업데이트합니다.
-                </Td>
-            </Tr>
             <Tr>
                 <Td><span><RequestMethod method={"POST"}/></span></Td>
                 <Td>
@@ -78,6 +48,51 @@ export const metadata = {
                 <Td>
                     [`/reply`](/iris/reply) \
                     방에 텍스트 메시지 또는 이미지를 보냅니다.
+                </Td>
+            </Tr>
+        </Tbody>
+    </Table>
+
+    <Table>
+        <Thead>
+            <Tr>
+                <Th colSpan={2}>구성 API 엔드포인트</Th>
+            </Tr>
+        </Thead>
+        <Tbody>
+            <Tr>
+                <Td><span><RequestMethod method={"GET"}/></span></Td>
+                <Td>
+                    [`/config/info`](/iris/config/info) \
+                    현재 구성을 JSON 응답으로 검색합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/config/botport`](/iris/config/botport) \
+                    봇 HTTP 서버 포트를 업데이트합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/config/dbrate`](/iris/config/dbrate) \
+                    데이터베이스 폴링 속도를 업데이트합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/config/endpoint`](/iris/config/endpoint) \
+                    메시지 전달을 위한 웹 서버 엔드포인트를 업데이트합니다.
+                </Td>
+            </Tr>
+            <Tr>
+                <Td><span><RequestMethod method={"POST"}/></span></Td>
+                <Td>
+                    [`/config/sendrate`](/iris/config/sendrate) \
+                    메시지 전송 속도를 업데이트합니다.
                 </Td>
             </Tr>
         </Tbody>

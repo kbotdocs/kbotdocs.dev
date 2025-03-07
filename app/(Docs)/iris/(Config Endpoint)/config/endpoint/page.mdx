@@ -23,13 +23,13 @@ export const metadata = {
             <Tr>
                 <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
                 <Td>
-                    <Endpoint method={"GET"}>`/config/endpoint`</Endpoint>
+                    <Endpoint method={"POST"}>`/config/endpoint`</Endpoint>
                 </Td>
             </Tr>
             <Tr>
                 <Td><span className={"text-sm"}>**Content-Type**</span></Td>
                 <Td>
-                    `-/-`
+                    `application/json`
                 </Td>
             </Tr>
         </Tbody>
@@ -39,13 +39,15 @@ export const metadata = {
     ## 요청
 
     <Section>
-        ### 쿼리
+        ### 본문
 
-        ~~~http
-        /config/endpoint?endpoint=[YOUR_WEB_SERVER_URL]
+        ~~~json
+        {
+          "endpoint": "[YOUR_WEB_SERVER_URL]"
+        }
         ~~~
 
-        <ParamList caption={"쿼리 매개변수"}>
+        <ParamList caption={"본문 매개변수"}>
             <ParamItem param={"endpoint"} type={"string"}>
                 업데이트할 웹 서버 엔드포인트입니다.
             </ParamItem>
@@ -55,7 +57,9 @@ export const metadata = {
         ### 예제
 
         ~~~bash
-        curl http://[YOUR_DEVICE_IP]:[bot_http_port]/config/endpoint?endpoint=http://192.168.1.100:5000/new_messages
+      curl -d '{"endpoint": "http://192.168.1.100:5000/new_messages"}' \
+        -H "Content-Type: application/json" \
+        -X POST http://[YOUR_DEVICE_IP]:[bot_http_port]/config/endpoint
         ~~~
     </Section>
 </Section>

@@ -1,0 +1,69 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+  metadataBase: new URL("https://kbotdocs.dev"),
+  title: "/config/botport - Iris",
+  openGraph: {
+    ...openGraph,
+    title: "/config/botport - Iris"
+  }
+}
+
+<Section>
+  # /config/botport
+
+  봇 HTTP 서버 포트를 업데이트합니다.
+
+  <Noti type="info">
+    포트 변경 사항은 Iris 재시작 후에 적용됩니다.
+  </Noti>
+
+  <Table>
+    <colgroup>
+      <col width={"200px"}/>
+      <col/>
+    </colgroup>
+    <Tbody>
+      <Tr>
+        <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
+        <Td>
+          <Endpoint method={"POST"}>`/config/botport`</Endpoint>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td><span className={"text-sm"}>**Content-Type**</span></Td>
+        <Td>
+          `application/json`
+        </Td>
+      </Tr>
+    </Tbody>
+  </Table>
+</Section>
+<Section>
+  ## 요청
+
+  <Section>
+    ### 본문
+
+    ~~~json
+    {
+      "port": [NEW_PORT_NUMBER]
+    }
+    ~~~
+
+    <ParamList caption={"본문 매개변수"}>
+      <ParamItem param={"port"} type={"int"}>
+        업데이트할 HTTP 서버 포트입니다.
+      </ParamItem>
+    </ParamList>
+  </Section>
+  <Section>
+    ### 예제
+
+    ~~~bash
+    curl -d '{"port": 3001}' \
+      -H "Content-Type: application/json" \
+      -X POST http://[YOUR_DEVICE_IP]:[bot_http_port]/config/botport
+    ~~~
+  </Section>
+</Section>

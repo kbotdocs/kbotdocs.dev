@@ -1,0 +1,65 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+  metadataBase: new URL("https://kbotdocs.dev"),
+  title: "/config/sendrate - Iris",
+  openGraph: {
+    ...openGraph,
+    title: "/config/sendrate - Iris"
+  }
+}
+
+<Section>
+  # /config/sendrate
+
+  메시지 전송 지연 시간을 업데이트합니다.
+
+  <Table>
+    <colgroup>
+      <col width={"200px"}/>
+      <col/>
+    </colgroup>
+    <Tbody>
+      <Tr>
+        <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
+        <Td>
+          <Endpoint method={"POST"}>`/config/sendrate`</Endpoint>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td><span className={"text-sm"}>**Content-Type**</span></Td>
+        <Td>
+          `application/json`
+        </Td>
+      </Tr>
+    </Tbody>
+  </Table>
+</Section>
+<Section>
+  ## 요청
+
+  <Section>
+    ### 본문
+
+    ~~~json
+    {
+      "rate": [MESSAGE_SEND_INTERVAL_IN_MILLISECONDS]
+    }
+    ~~~
+
+    <ParamList caption={"본문 매개변수"}>
+      <ParamItem param={"rate"} type={"int"}>
+        업데이트할 메시지 전송 지연 시간(밀리초; ms)입니다.
+      </ParamItem>
+    </ParamList>
+  </Section>
+  <Section>
+    ### 예제
+
+    ~~~bash
+    curl -d '{"rate": 200}' \
+      -H "Content-Type: application/json" \
+      -X POST http://[YOUR_DEVICE_IP]:[bot_http_port]/config/sendrate
+    ~~~
+  </Section>
+</Section>
