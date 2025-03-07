@@ -142,15 +142,15 @@ export const mdxComponents: MDXComponents = {
   Dl({children, className, ...p}) {
     return (
       <dl
-        className={`[&_dl]:mt-[8px] [&_dl]:mb-[4px] [&_dl]:first:mt-0 [&_dl]:pl-[1rem] [&_dl]:border-l-default [&_dl]:border-l-[2px] ${className || ""}`} {...p}>{children}</dl>);
+        className={`md:grid md:grid-cols-[200px_auto] ${className || ""}`} {...p}>{children}</dl>);
   },
   Dt({children, className, ...p}) {
-    return (<dt className={`mt-[8px] mb-[4px] first:mt-0 ${className || ""}`} {...p}>{children}</dt>);
+    return (<dt className={`pt-[12px] pb-[6px] font-bold md:pb-[12px] md:border-b md:border-default last-of-type:border-none ${className || ""}`} {...p}>{children}</dt>);
   },
   Dd({children, className, ...p}) {
     return (
       <dd
-        className={`flex flex-col gap-[4px] ml-[16px] mb-[16px] last:mb-0 ${className || ""}`} {...p}>{children}</dd>);
+        className={`flex items-center pt-[6px] pb-[12px] border-b border-default last-of-type:border-none md:pt-[12px] ${className || ""}`} {...p}>{children}</dd>);
   },
   AppCompat({...p}) {
     return (<AppCompat {...p}/>);

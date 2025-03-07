@@ -20,26 +20,16 @@ export const metadata = {
     반환합니다.
   </Noti>
 
-  <Table>
-    <colgroup>
-      <col width={"200px"}/>
-      <col/>
-    </colgroup>
-    <Tbody>
-      <Tr>
-        <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
-        <Td>
-          <Endpoint method={"POST"}>`/query`</Endpoint>
-        </Td>
-      </Tr>
-      <Tr>
-        <Td><span className={"text-sm"}>**Content-Type**</span></Td>
-        <Td>
-          `application/json`
-        </Td>
-      </Tr>
-    </Tbody>
-  </Table>
+  <Dl>
+    <Dt>엔드포인트</Dt>
+    <Dd>
+      <Endpoint method={"POST"}>`/query`</Endpoint>
+    </Dd>
+    <Dt>Content-Type</Dt>
+    <Dd>
+      `application/json`
+    </Dd>
+  </Dl>
 </Section>
 <Section>
   ## 요청

@@ -18,26 +18,16 @@ export const metadata = {
     포트 변경 사항은 Iris 재시작 후에 적용됩니다.
   </Noti>
 
-  <Table>
-    <colgroup>
-      <col width={"200px"}/>
-      <col/>
-    </colgroup>
-    <Tbody>
-      <Tr>
-        <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
-        <Td>
-          <Endpoint method={"POST"}>`/config/botport`</Endpoint>
-        </Td>
-      </Tr>
-      <Tr>
-        <Td><span className={"text-sm"}>**Content-Type**</span></Td>
-        <Td>
-          `application/json`
-        </Td>
-      </Tr>
-    </Tbody>
-  </Table>
+  <Dl>
+    <Dt>엔드포인트</Dt>
+    <Dd>
+      <Endpoint method={"POST"}>`/config/botport`</Endpoint>
+    </Dd>
+    <Dt>Content-Type</Dt>
+    <Dd>
+      `application/json`
+    </Dd>
+  </Dl>
 </Section>
 <Section>
   ## 요청

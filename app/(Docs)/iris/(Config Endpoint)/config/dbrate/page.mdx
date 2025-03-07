@@ -18,26 +18,16 @@ export const metadata = {
     낮은 `rate` 값은 메시지를 더 즉각적으로 감지할 수 있지만 CPU 사용량을 증가시킵니다.
   </Noti>
 
-  <Table>
-    <colgroup>
-      <col width={"200px"}/>
-      <col/>
-    </colgroup>
-    <Tbody>
-      <Tr>
-        <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
-        <Td>
-          <Endpoint method={"POST"}>`/config/dbrate`</Endpoint>
-        </Td>
-      </Tr>
-      <Tr>
-        <Td><span className={"text-sm"}>**Content-Type**</span></Td>
-        <Td>
-          `application/json`
-        </Td>
-      </Tr>
-    </Tbody>
-  </Table>
+  <Dl>
+    <Dt>엔드포인트</Dt>
+    <Dd>
+      <Endpoint method={"POST"}>`/config/dbrate`</Endpoint>
+    </Dd>
+    <Dt>Content-Type</Dt>
+    <Dd>
+      `application/json`
+    </Dd>
+  </Dl>
 </Section>
 <Section>
   ## 요청

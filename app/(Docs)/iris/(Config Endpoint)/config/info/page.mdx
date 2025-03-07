@@ -14,26 +14,16 @@ export const metadata = {
 
   현재 구성을 JSON 응답으로 검색합니다.
 
-  <Table>
-    <colgroup>
-      <col width={"200px"}/>
-      <col/>
-    </colgroup>
-    <Tbody>
-      <Tr>
-        <Td><span className={"text-sm"}>**엔드포인트**</span></Td>
-        <Td>
-          <Endpoint method={"GET"}>`/config/info`</Endpoint>
-        </Td>
-      </Tr>
-      <Tr>
-        <Td><span className={"text-sm"}>**Content-Type**</span></Td>
-        <Td>
-          `-/-`
-        </Td>
-      </Tr>
-    </Tbody>
-  </Table>
+  <Dl>
+    <Dt>엔드포인트</Dt>
+    <Dd>
+      <Endpoint method={"POST"}>`/config/info`</Endpoint>
+    </Dd>
+    <Dt>Content-Type</Dt>
+    <Dd>
+      `-/-`
+    </Dd>
+  </Dl>
 </Section>
 <Section>
   ## 요청
