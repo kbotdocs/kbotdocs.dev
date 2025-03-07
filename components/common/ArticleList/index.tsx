@@ -10,7 +10,7 @@ export default function ArticleList({ articles }: ArticleListProps) {
     return (
         <div className={"flex flex-col"}>
             {
-                articles.map((article, i) => (
+                articles.toReversed().map((article, i) => (
                     <ArticleItem article={article as Article} key={i} />
                 ))
             }
