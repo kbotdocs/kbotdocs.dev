@@ -1,5 +1,4 @@
 import {HTMLAttributes} from "react";
-import {Docs} from "@/constants/docs";
 import ArticleItem from "@/components/common/ArticleItem";
 
 interface ArticleListProps extends HTMLAttributes<HTMLDivElement> {
