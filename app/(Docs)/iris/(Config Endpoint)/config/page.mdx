@@ -2,22 +2,22 @@ import {openGraph} from "@/constants/metadata";
 
 export const metadata = {
   metadataBase: new URL("https://kbotdocs.dev"),
-  title: "/config/info - Iris",
+  title: "/config - Iris",
   openGraph: {
     ...openGraph,
-    title: "/config/info - Iris"
+    title: "/config - Iris"
   }
 }
 
 <Section>
-  # /config/info
+  # /config
 
   현재 구성을 JSON 응답으로 검색합니다.
 
   <Dl>
     <Dt>엔드포인트</Dt>
     <Dd>
-      <Endpoint method={"POST"}>`/config/info`</Endpoint>
+      <Endpoint method={"POST"}>`/config`</Endpoint>
     </Dd>
     <Dt>Content-Type</Dt>
     <Dd>
@@ -32,7 +32,7 @@ export const metadata = {
     ### 예제
 
     ~~~bash
-    curl http://[YOUR_DEVICE_IP]:[bot_http_port]/config/info
+    curl http://[YOUR_DEVICE_IP]:[bot_http_port]/config
     ~~~
   </Section>
 </Section>
@@ -43,7 +43,7 @@ export const metadata = {
   {
     "bot_name": "[YOUR_BOT_NAME]",
     "bot_http_port": [PORT_FOR_HTTP_SERVER],
-    "web_server_endpoint": "[YOUR_WEB_SERVER_URL_FOR_MESSAGE_FORWARDING],
+    "web_server_endpoint": "[YOUR_WEB_SERVER_URL_FOR_MESSAGE_FORWARDING]",
     "db_polling_rate": [DATABASE_POLLING_INTERVAL_IN_MILLISECONDS],
     "message_send_rate": [MESSAGE_SEND_INTERVAL_IN_MILLISECONDS],
     "bot_id": [YOUR_KAKAO_TALK_USER_ID]

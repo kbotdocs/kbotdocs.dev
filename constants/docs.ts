@@ -1176,11 +1176,17 @@ export const Docs: { [name: string]: DocCategory } = {
           {
             label: "구성 API 엔드포인트",
             children: [
-              {label: "/config/info", path: "/iris/config/info"},
+              {label: "/config", path: "/iris/config"},
               {label: "/config/botport", path: "/iris/config/botport"},
               {label: "/config/dbrate", path: "/iris/config/dbrate"},
               {label: "/config/endpoint", path: "/iris/config/endpoint"},
               {label: "/config/sendrate", path: "/iris/config/sendrate"},
+            ]
+          },
+          {
+            label: "WebSocket 엔드포인트",
+            children: [
+              {label: "/ws", path: "/iris/ws"},
             ]
           }
         ]

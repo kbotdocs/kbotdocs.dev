@@ -49,8 +49,8 @@ export const mdxComponents: MDXComponents = {
   Mark({children}) {
     return (<mark className={"bg-yellow text-gray-800 font-bold"}>{children}</mark>);
   },
-  Section({children}) {
-    return (<section className={"flex flex-col gap-[24px] w-full leading-normal section"}>{children}</section>);
+  Section({className, children, ...p}) {
+    return (<section className={`flex flex-col gap-[24px] w-full leading-normal section ${className || ""}`} {...p}>{children}</section>);
   },
   ol({children, ...p}) {
     return (<ol className={"flex flex-col gap-[2px]"} {...p}>{children}</ol>);
@@ -175,6 +175,9 @@ export const mdxComponents: MDXComponents = {
   },
   Tab({children, ...p}) {
     return (<Tab {...p}>{children}</Tab>);
+  },
+  TabItem({className, children, ...p}) {
+    return (<section className={`flex flex-col gap-[24px] p-[20px] w-full leading-normal section`} {...p}>{children}</section>);
   },
   RequestMethod({...p}) {
     return (<RequestMethod {...p}/>);

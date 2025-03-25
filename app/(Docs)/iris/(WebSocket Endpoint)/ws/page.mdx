@@ -1,0 +1,62 @@
+import {openGraph} from "@/constants/metadata";
+
+export const metadata = {
+  metadataBase: new URL("https://kbotdocs.dev"),
+  title: "/ws - Iris",
+  openGraph: {
+    ...openGraph,
+    title: "/ws - Iris"
+  }
+}
+
+<Section>
+  # /ws
+
+  WebSocket 연결을 생성합니다. Iris가 메시지를 감지할 경우 해당 엔드포인트로 데이터를 전달합니다.
+
+  <Dl>
+    <Dt>엔드포인트</Dt>
+    <Dd>
+      <Endpoint method={"POST"}>`/ws`</Endpoint>
+    </Dd>
+    <Dt>Content-Type</Dt>
+    <Dd>
+      `application/json`
+    </Dd>
+  </Dl>
+</Section>
+<Section>
+  ## 응답
+
+  ~~~json
+  {
+    "msg": "[DECRYPTED_MESSAGE_CONTENT]",
+    "room": "[CHAT_ROOM_NAME]",
+    "sender": "[SENDER_NAME]",
+    "json": {
+      "_id": "...",
+      "chat_id": "...",
+      "user_id": "...",
+      "message": "[DECRYPTED_MESSAGE_CONTENT]", // 복호화된 메시지 내용, "msg" 필드와 동일
+      "attachment": "[DECRYPTED_ATTACHMENT_INFO]", // 복호화된 첨부 파일 정보 (있는 경우)
+      "v": "{\"enc\": 0, ...}",           // 원본 'v' 열 값 (JSON 형식)
+      // ... chat_logs 테이블의 기타 열 ...
+    }
+  }
+  ~~~
+
+  <ParamList caption={"응답 매개변수"}>
+    <ParamItem param={"msg"} type={"string"}>
+      복호화된 메시지입니다.
+    </ParamItem>
+    <ParamItem param={"room"} type={"string"}>
+      방의 이름입니다. 1:1 채팅의 경우 발신자의 이름입니다.
+    </ParamItem>
+    <ParamItem param={"sender"} type={"string"}>
+      발신자의 이름입니다.
+    </ParamItem>
+    <ParamItem param={"json"} type={"object"}>
+      `chat_logs` 테이블의 원시 데이터베이스 행입니다.
+    </ParamItem>
+  </ParamList>
+</Section>

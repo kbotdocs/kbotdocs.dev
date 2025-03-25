@@ -37,37 +37,15 @@ export const metadata = {
   <Section>
     ### 본문
 
-    <Tab label={["단일 쿼리", "벌크 쿼리"]}>
-      <Section>
-        ~~~json
-        {
-          "query": "[SQL_QUERY]",
-          "bind": ["[BINDING_VALUE_1]", "[BINDING_VALUE_2]", ...]
-        }
-        ~~~
-      </Section>
-      <Section>
-        ~~~json
-        {
-          "queries": [
-            {
-              "query": "[SQL_QUERY_1]",
-              "bind": ["[BINDING_VALUE_1]", "[BINDING_VALUE_2]", ...]
-            },
-            {
-              "query": "[SQL_QUERY_2]",
-              "bind": []
-            },
-            // ...
-          ]
-        }
-        ~~~
-      </Section>
-    </Tab>
+    <Section>
+      ~~~json
+      {
+        "query": "[SQL_QUERY]",
+        "bind": ["[BINDING_VALUE_1]", "[BINDING_VALUE_2]", ...]
+      }
+      ~~~
+    </Section>
     <ParamList caption={"본문 매개변수"}>
-      <ParamItem param={"queries"} type={"Query[]"}>
-        실행할 쿼리의 배열입니다.
-      </ParamItem>
       <ParamItem param={"query"} type={"string"}>
         SQL 쿼리 문자열입니다.
       </ParamItem>
@@ -79,16 +57,8 @@ export const metadata = {
   <Section>
     ### 예제
 
-    - 단일 쿼리
     ~~~bash
     curl -d '{"query": "SELECT _id, chat_id, user_id, message FROM chat_logs WHERE user_id = ? ORDER BY _id DESC LIMIT 5", "bind": ["1234567890"]}' \
-      -H "Content-Type: application/json" \
-      -X POST http://[YOUR_DEVICE_IP]:[bot_http_port]/query
-    ~~~
-
-    - 벌크 쿼리
-    ~~~bash
-    curl -d '{"queries": [{"query": "SELECT _id, chat_id, user_id, message FROM chat_logs ORDER BY _id DESC LIMIT 5", "bind": []}, {"query": "SELECT name FROM db2.friends LIMIT 2", "bind": []}]}' \
       -H "Content-Type: application/json" \
       -X POST http://[YOUR_DEVICE_IP]:[bot_http_port]/query
     ~~~
@@ -120,7 +90,7 @@ export const metadata = {
       요청의 성공 여부입니다.
     </ParamItem>
     <ParamItem param={"data"} type={"QueryResult[]"}>
-      쿼리 결과에 대한 배열이 담긴 배열입니다. 단일 쿼리의 경우 요소는 1개입니다. 벌크 쿼리의 경우 요소의 개수는 요청으로 전달한 쿼리의 개수입니다.
+      쿼리 결과에 대한 배열이 담긴 배열입니다.
     </ParamItem>
   </ParamList>
 </Section>
