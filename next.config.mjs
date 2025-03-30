@@ -6,39 +6,32 @@ import rehypeKatex from "rehype-katex";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    webpack: config => {
-        config.module.rules.push({
-            test: /\.svg$/,
-            use: ["@svgr/webpack"],
-        });
-        return config;
-    },
-    reactStrictMode: true,
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'github.com',
-                port: '',
-                pathname: '/user-attachments/assets/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'avatars.githubusercontent.com',
-                port: '',
-                pathname: '/**'
-            }
-        ],
-    },
+  webpack: config => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
+  reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  transpilePackages: ["next-mdx-remote"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
 };
 
 const withMDX = nextMDX({
-    extension: /\.mdx?$/,
-    options: {
-        remarkPlugins: [remarkGfm, remarkMath],
-        rehypePlugins: [rehypeSlug, rehypeKatex],
-    }
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm, remarkMath],
+    rehypePlugins: [rehypeSlug, rehypeKatex],
+  }
 });
 
 export default withMDX(nextConfig);

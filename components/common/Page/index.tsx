@@ -1,6 +1,6 @@
 import React, {HTMLAttributes} from "react";
 import {usePathname} from "next/navigation";
-import { Link } from "react-transition-progress/next";
+import Link from "next/link";
 
 interface IPage extends HTMLAttributes<HTMLDivElement> {
     doc: Doc;

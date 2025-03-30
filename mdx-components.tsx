@@ -1,5 +1,5 @@
 import type {MDXComponents} from "mdx/types";
-import {Link} from "react-transition-progress/next";
+import Link from "next/link";
 import Icon from "@/components/common/Icon";
 import CodeBlock from "@/components/common/CodeBlock";
 import Keys from "@/components/common/Keys";
@@ -12,8 +12,6 @@ import Feature from "@/components/common/Feature";
 import FeatureStatusNoti from "@/components/common/FeatureStatusNoti";
 import MileStone from "@/components/common/MileStone";
 import Details from "@/components/common/Details";
-import ArticleList from "@/components/common/ArticleList";
-import ArticleHeader from "@/components/common/ArticleHeader";
 import Tab from "@/components/common/Tab";
 import RequestMethod from "@/components/common/RequestMethod";
 import Endpoint from "@/components/common/Endpoint";
@@ -166,12 +164,6 @@ export const mdxComponents: MDXComponents = {
   },
   Details({children, ...p}) {
     return (<Details {...p}>{children}</Details>);
-  },
-  ArticleList({...p}) {
-    return (<ArticleList {...p} />);
-  },
-  ArticleHeader({children, ...p}) {
-    return (<ArticleHeader {...p}>{children}</ArticleHeader>);
   },
   Tab({children, ...p}) {
     return (<Tab {...p}>{children}</Tab>);

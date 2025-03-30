@@ -4,19 +4,25 @@ interface Doc {
     children?: (Doc | Article)[];
 }
 
-interface Article extends Doc {
-    author: Author | Author[];
-    description: string;
-    thumbnail: string;
-    publishDate: Date;
-}
-
 type DocCategory = {
     label: string,
     hide?: boolean,
     docs: (Doc | Article)[]
 }
 
-type Author = {
-    name: string
+type DocCompat = {
+  data: string,
+  feature: string,
 }
+
+type DocMilestone = {
+  prev?: string,
+  next?: string,
+}
+
+type DocMetadata = {
+  title: string,
+  category: string,
+  compat?: DocCompat,
+  milestone?: DocMilestone
+};

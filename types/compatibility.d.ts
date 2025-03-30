@@ -9,6 +9,8 @@ type FeatureStatus = {
     nonStandard?: boolean,
 };
 
+type CompatibilityStatus = "full_support" | "partial_support" | "no_support";
+
 type CompatibilityHistory = {
     status: CompatibilityStatus,
     detailedStatus?: DetailedStatus,

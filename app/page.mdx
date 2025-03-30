@@ -5,65 +5,57 @@ import {Docs} from "@/constants/docs";
 import IconButton from "../components/common/IconButton";
 
 <div>
-    <div className={"flex justify-center mt-header-h px-screen-x-default md:px-screen-x-md"}>
-        <div
-            className={"relative w-full md:max-w-[952px]"}>
-            <main className={"flex flex-col gap-[32px] py-header-main overflow-auto"}>
-                <Section>
-                    # KBotDocs
+  <div className={"flex justify-center mt-header-h px-screen-x-default md:px-screen-x-md"}>
+    <div
+      className={"relative w-full md:max-w-[952px]"}>
+      <main className={"flex flex-col gap-[32px] py-header-main overflow-auto"}>
+        <Section>
+          # KBotDocs
 
-                    프로그래밍 및 카카오톡봇 학습을 위한 자습서와 레거시 API, API2 등의 명세서를 제공하는 카카오톡봇 문서입니다.
+          프로그래밍 및 카카오톡봇 학습을 위한 자습서와 레거시 API, API2 등의 명세서를 제공하는 카카오톡봇 문서입니다.
 
-                    <div className={"grid grid-cols-1 gap-[16px] md:grid-cols-2"}>
-                        <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
-                            <div className={"leading-snug"}>
-                                <div className={"flex items-center gap-[8px]"}>
-                                    <Guide className={"w-[1.25rem] h-[1.25rem]"}/>
-                                    <h3>자습서</h3>
-                                </div>
-                                <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>프로그래밍 및 카카오톡봇 학습을 위한 자습서</p>
-                            </div>
-                            <div className={"ml-[calc(1.25rem+8px)]"}>
-                                - [기초 자습서](/basic)
-                            </div>
-                        </div>
-                        <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
-                            <div className={"leading-snug"}>
-                                <div className={"flex items-center gap-[8px]"}>
-                                    <Reference className={"w-[1.25rem] h-[1.25rem]"}/>
-                                    <h3>레퍼런스</h3>
-                                </div>
-                                <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>카카오톡봇 API의 명세서</p>
-                            </div>
-                            <div className={"ml-[calc(1.25rem+8px)]"}>
-                                - [레거시 API](/legacy)
-                                - [API2](/api2)
-                                - [StarLight](/starlight)
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-                <Section>
-                    <div className={"flex justify-between"}>
-                        ## Article
-                        [<IconButton icon={"ArrowIcon"} />](/article)
-                    </div>
+          <div className={"grid grid-cols-1 gap-[16px] md:grid-cols-2"}>
+            <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
+              <div className={"leading-snug"}>
+                <div className={"flex items-center gap-[8px]"}>
+                  <Guide className={"w-[1.25rem] h-[1.25rem]"}/>
+                  <h3>자습서</h3>
+                </div>
+                <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>프로그래밍 및 카카오톡봇 학습을 위한 자습서</p>
+              </div>
+              <div className={"ml-[calc(1.25rem+8px)]"}>
+                - [기초 자습서](/basic)
+              </div>
+            </div>
+            <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
+              <div className={"leading-snug"}>
+                <div className={"flex items-center gap-[8px]"}>
+                  <Reference className={"w-[1.25rem] h-[1.25rem]"}/>
+                  <h3>레퍼런스</h3>
+                </div>
+                <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>카카오톡봇 API의 명세서</p>
+              </div>
+              <div className={"ml-[calc(1.25rem+8px)]"}>
+                - [레거시 API](/legacy)
+                - [API2](/api2)
+                - [StarLight](/starlight)
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Section>
+          ## 기여
 
+          카카오톡봇 문서는 [Github 리포지토리](https://github.com/kbotdocs/kbotdocs.dev)의 Issues, Pull Request를 통해 기여할 수 있습니다. 문서의
+          내용 추가, 수정뿐만 아니라 사소한 오탈자 수정/제보 또한 큰 도움이 됩니다.
 
-                    <ArticleList articles={Docs["article"].docs[0].children.toReversed().filter((_, i) => i < 5)} />
-                </Section>
-                <Section>
-                    ## 기여
+          <Section>
+            ### 기여자
 
-                    카카오톡봇 문서는 [Github 리포지토리](https://github.com/kbotdocs/kbotdocs.dev)의 Issues, Pull Request를 통해 기여할 수 있습니다. 문서의 내용 추가, 수정뿐만 아니라 사소한 오탈자 수정/제보 또한 큰 도움이 됩니다.
-
-                    <Section>
-                        ### 기여자
-
-                        <Contributors />
-                    </Section>
-                </Section>
-            </main>
-        </div>
+            <Contributors/>
+          </Section>
+        </Section>
+      </main>
     </div>
+  </div>
 </div>
