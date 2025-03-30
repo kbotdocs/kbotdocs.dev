@@ -26,11 +26,11 @@ export default async function MileStone({prev, next}: MileStoneProps) {
         {
           prev && (
             <Link href={`/${prev}`}
-                  className={"flex items-center gap-[16px] p-[12px_16px] rounded-lg hover:no-underline hover:bg-default-hover hover:bg-gradient-to-r hover:from-[theme(backgroundColor.layer2)] hover:to-[theme(backgroundColor.default)]"}>
+                  className={"flex items-center gap-[12px] p-[10px_12px] rounded-lg border border-default hover:bg-default-hover hover:no-underline"}>
               <Icon icon={"ArrowIcon"} className={"w-[1rem] h-[1rem] stroke-default rotate-[180deg]"}/>
               <div className={"flex flex-col gap-[4px]"}>
-                <p className={"font-bold text-default"}>이전</p>
-                <p>{prevTitle}</p>
+                <p className={"text-sm text-description"}>이전</p>
+                <p className={"text-default"}>{prevTitle}</p>
               </div>
             </Link>
           )
@@ -40,11 +40,11 @@ export default async function MileStone({prev, next}: MileStoneProps) {
         {
           next && (
             <Link href={`/${next}`}
-                  className={"flex flex-row-reverse items-center gap-[16px] p-[12px_16px] rounded-lg hover:no-underline hover:bg-gradient-to-l hover:from-[theme(backgroundColor.layer2)] hover:to-[theme(backgroundColor.default)]"}>
+                  className={"flex flex-row-reverse items-center gap-[12px] p-[10px_12px] rounded-lg border border-default hover:bg-default-hover hover:no-underline"}>
               <Icon icon={"ArrowIcon"} className={"w-[1rem] h-[1rem] stroke-default"}/>
               <div className={"flex flex-col items-end gap-[4px]"}>
-                <p className={"font-bold text-default"}>다음</p>
-                <p>{nextTitle}</p>
+                <p className={"text-sm text-description"}>다음</p>
+                <p className={"text-default"}>{nextTitle}</p>
               </div>
             </Link>
           )
