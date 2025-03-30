@@ -2,7 +2,7 @@
 
 import {HTMLAttributes, useEffect, useState} from "react";
 import Noti from "@/components/common/Noti";
-import Link from "next/link";
+import {Link} from "react-transition-progress/next";
 
 interface IFeatureStatusNoti extends HTMLAttributes<HTMLDivElement> {
   status: FeatureStatus | string[];

@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "react-transition-progress/next";
 
 interface IContributor extends HTMLAttributes<HTMLDivElement> {
     login: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import {useEffect, useRef} from "react";
-import Link from "next/link";
+import {Link} from "react-transition-progress/next";
 import Icon from "@/components/common/Icon";
 import ThemeButton from "@/components/common/ThemeButton";
 import IconButton from "@/components/common/IconButton";

@@ -7,6 +7,7 @@ import Header from "@/components/common/Header";
 import GA from "@/components/common/GA";
 import "./globals.css";
 import "katex/dist/katex.min.css";
+import {ProgressBar, ProgressBarProvider} from "react-transition-progress";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kbotdocs.dev"),
@@ -91,8 +92,11 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     <body
       className={`${open_sans.variable} ${pretendard.variable} ${cascadia_code_nf.variable} ${cascadia_mono_nf.variable}`}>
     <ThemeProvider>
-      <Header/>
-      {children}
+      <ProgressBarProvider>
+        <ProgressBar className={"fixed top-0 z-[3] h-[2px] bg-[theme(borderColor.emphasis)]"}/>
+        <Header/>
+        {children}
+      </ProgressBarProvider>
     </ThemeProvider>
     <GA/>
     </body>
