@@ -1,10 +1,3 @@
-import remarkFrontmatter from "remark-frontmatter";
-import remarkGfm from "remark-gfm";
-import remarkMath from "remark-math";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import rehypeSlug from "rehype-slug";
-import rehypeKatex from "rehype-katex";
-import {Fragment, jsx, jsxs} from "react/jsx-runtime";
 import {Param, pageParams, getPage} from "@/utils/Page";
 import AppCompat from "@/components/common/AppCompat";
 import MileStone from "@/components/common/MileStone";
@@ -63,11 +56,10 @@ export default async function Page({params}: pageParams) {
     const compat_fetch = await fetch(`https://compat.kbotdocs.dev/${frontmatter.compat.data}.json`);
     const compat_data = await compat_fetch.json();
 
-    if (frontmatter.compat.feature !== "*") {
-      compatNoti = (
-        <FeatureStatusNoti status={compat_data[frontmatter.compat.feature].status}/>
-      );
-    }
+    compatNoti = (frontmatter.compat.feature === "*") ?
+      <FeatureStatusNoti status={compat_data[Object.keys(compat_data)[0]].status}/>
+      :
+      <FeatureStatusNoti status={compat_data[frontmatter.compat.feature].status}/>;
 
     compatTable = (
       <section className={`flex flex-col gap-[24px] w-full leading-normal section`}>
