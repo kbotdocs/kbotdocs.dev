@@ -35,7 +35,7 @@ export default function PageDir({doc, onLinkClick, children, className, ...p}: I
       <div ref={childrenRef} className={`pl-[.875rem] overflow-hidden ${(isFold) ? "hidden" : "block"}`}>
         {doc.path && <Page doc={{...doc, label: "개요"}} onLinkClick={onLinkClick}/>}
         {
-          (doc.children && doc.children.length > 0) && doc.children.map((e, i) => {
+          (doc.children && doc.children.length > 0) && doc.children.filter(e => !e.hide).map((e, i) => {
             if (e.children && e.children.length > 0) {
               return (<PageDir key={i} doc={e}/>);
             }
