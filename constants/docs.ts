@@ -1205,7 +1205,8 @@ export const Docs: { [name: string]: DocCategory } = {
           {label: "배열", path: "/basic/8-array"},
           {label: "조건문", path: "/basic/9-conditionals"},
           {label: "반복문", path: "/basic/10-loops"},
-          {label: "함수", path: "/basic/11-function"}
+          {label: "함수", path: "/basic/11-function"},
+          {label: "객체 기초", path: "/basic/12-basic-object"},
         ]
       },
     ]
