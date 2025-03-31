@@ -1,13 +1,14 @@
 interface Doc {
     label: string;
     path?: string;
-    children?: (Doc | Article)[];
+    hide?: boolean;
+    children?: Doc[];
 }
 
 type DocCategory = {
     label: string,
     hide?: boolean,
-    docs: (Doc | Article)[]
+    docs: Doc[]
 }
 
 type DocCompat = {
