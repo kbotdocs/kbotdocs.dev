@@ -98,7 +98,7 @@ export default function Header() {
               <PageDir docCategory={{label: "레퍼런스", docs: (DocNavigation["/reference"] as DocInfo[])}} fold noEmphasis/>
               <PageDir docCategory={{label: "자습서", docs: (DocNavigation["/learn"] as DocInfo[])}} fold noEmphasis/>
             </div>
-            <TOC/>
+            <TOC onAnchorClick={{ before: cancelButtonOnClickHandler }}/>
             <PageNav/>
           </div>
         </div>

@@ -4,7 +4,10 @@ import React, {useState, useEffect, useRef, HTMLAttributes} from "react";
 import {usePathname} from "next/navigation";
 
 interface TOCProps extends HTMLAttributes<HTMLUListElement> {
-  onAnchorClick?: () => void;
+  onAnchorClick?: {
+    before?: () => void;
+    after?: () => void;
+  };
 }
 
 export default function TOC({onAnchorClick, className, ...p}: TOCProps) {
@@ -15,11 +18,12 @@ export default function TOC({onAnchorClick, className, ...p}: TOCProps) {
 
   const liOnClickHandler = (id: string) => {
     if (document.getElementById(id)) {
+      onAnchorClick?.before && onAnchorClick.before();
       window.scrollBy({
         top: document.getElementById(id)!.getBoundingClientRect().top - 160
       });
       scrollToRef.current += document.getElementById(id)!.getBoundingClientRect().top - 160;
-      onAnchorClick && onAnchorClick();
+      onAnchorClick?.after && onAnchorClick.after();
     }
   };
 
