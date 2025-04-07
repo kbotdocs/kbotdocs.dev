@@ -36,21 +36,23 @@ export default function PageNav({className, onLinkClick, ...p}: IPageNav) {
   }, [navKey, pathname]);
 
   useEffect(() => {
-    setNav(DocNavigation[navKey]);
+    setNav(DocNavigation[navKey] || []);
   }, [navKey]);
 
   return (
-    <nav className={`block overflow-auto ${className || ""}`} {...p}>
-      <ul className={`h-full leading-relaxed overflow-hidden text-sm mt-0 p-none border-0 rounded-[0] select-none`}>
-        {
-          nav && nav.filter(e => !e.hide).map((doc: DocCategory | DocInfo, i: number) => {
-            if ("docs" in doc) {
-              return (<PageDir key={i} docCategory={doc} onLinkClick={onLinkClick}/>);
-            }
-            return (<Page key={i} doc={doc} onLinkClick={onLinkClick}/>);
-          })
-        }
-      </ul>
-    </nav>
+    (nav.length > 0) && (
+      <nav className={`block overflow-auto ${className || ""}`} {...p}>
+        <ul className={`h-full leading-relaxed overflow-hidden text-sm mt-0 p-none border-0 rounded-[0] select-none`}>
+          {
+            nav && nav.filter(e => !e.hide).map((doc: DocCategory | DocInfo, i: number) => {
+              if ("docs" in doc) {
+                return (<PageDir key={i} docCategory={doc} onLinkClick={onLinkClick}/>);
+              }
+              return (<Page key={i} doc={doc} onLinkClick={onLinkClick}/>);
+            })
+          }
+        </ul>
+      </nav>
+    )
   );
 }
