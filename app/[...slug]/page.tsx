@@ -5,7 +5,10 @@ import {Docs} from "@/constants/docs";
 import {notFound} from "next/navigation";
 import FeatureStatusNoti from "@/components/common/FeatureStatusNoti";
 
+export const runtime = 'edge';
+
 export function generateStaticParams() {
+  console.log(Object.keys(Docs).map(e => e.replace("/", "").split("/")));
   return Object.keys(Docs).map(e => e.replace("/", "").split("/"));
 }
 
