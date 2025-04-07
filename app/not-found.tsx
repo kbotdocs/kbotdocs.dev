@@ -21,7 +21,7 @@ export default function NotFound() {
             }
             <div className={"flex flex-col justify-center gap-[8px]"}>
               <div className={"flex items-center gap-[8px]"}>
-                <h2>404</h2>
+                <h3>404</h3>
                 <div className={"text-lg"}>Not Found</div>
               </div>
               <div className={"text-description"}>페이지를 찾을 수 없습니다.</div>

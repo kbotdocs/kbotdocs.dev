@@ -1,5 +1,5 @@
-import TOC from "@/components/common/TOC";
 import React from "react";
+import TOC from "@/components/common/TOC";
 import PageNav from "@/components/common/PageNav";
 
 export default function Layout({children}: Readonly<{ children: React.ReactNode; }>) {
