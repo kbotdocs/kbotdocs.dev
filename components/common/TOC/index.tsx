@@ -1,6 +1,7 @@
 "use client";
 
 import React, {useState, useEffect, useRef, HTMLAttributes} from "react";
+import {usePathname} from "next/navigation";
 
 interface TOCProps extends HTMLAttributes<HTMLUListElement> {
   onAnchorClick?: () => void;
@@ -10,6 +11,7 @@ export default function TOC({onAnchorClick, className, ...p}: TOCProps) {
   const [headers, setHeaders] = useState<Element[]>([]);
   const [pageInViewport, setPageInViewport] = useState<string>("");
   const scrollToRef = useRef<number>(0);
+  const pathname = usePathname();
 
   const liOnClickHandler = (id: string) => {
     if (document.getElementById(id)) {
@@ -35,7 +37,10 @@ export default function TOC({onAnchorClick, className, ...p}: TOCProps) {
       callback();
       observer.observe(target, options);
     }
-  }, []);
+    else {
+      setHeaders([]);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const listeners: (() => void)[] = [];
