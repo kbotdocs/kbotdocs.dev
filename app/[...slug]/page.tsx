@@ -8,7 +8,8 @@ import FeatureStatusNoti from "@/components/common/FeatureStatusNoti";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.keys(Docs).map(e => e.replace("/", "").split("/"));
+  let paramsArr: Param[] = Object.keys(Docs).map(e => e.replace("/", "").split("/"));
+  return paramsArr;
 }
 
 export async function generateMetadata({params}: pageParams) {
