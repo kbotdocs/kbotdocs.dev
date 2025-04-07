@@ -1,4 +1,4 @@
-import {Param, pageParams, getPage} from "@/utils/Page";
+import {pageParams, getPage} from "@/utils/Page";
 import AppCompat from "@/components/common/AppCompat";
 import MileStone from "@/components/common/MileStone";
 import {Docs} from "@/constants/docs";
@@ -6,24 +6,7 @@ import {notFound} from "next/navigation";
 import FeatureStatusNoti from "@/components/common/FeatureStatusNoti";
 
 export function generateStaticParams() {
-  let paramsArr: Param[] = [];
-
-  const loopFn = (e: Doc) => {
-    if (e.children) {
-      e.children.map(loopFn);
-    }
-    if (e.path) {
-      paramsArr.push({
-        slug: e.path.replace("/", "").split("/")
-      });
-    }
-  }
-
-  Object.values(Docs).forEach(e => {
-    e.docs.forEach(loopFn);
-  });
-
-  return paramsArr;
+  return Object.keys(Docs).map(e => e.split("/"));
 }
 
 export async function generateMetadata({params}: pageParams) {
@@ -80,8 +63,8 @@ export default async function Page({params}: pageParams) {
 
   return (
     <>
-      {compatNoti}
       <h1>{frontmatter.title}</h1>
+      {compatNoti}
       {content}
       {compatTable}
       {milestone}

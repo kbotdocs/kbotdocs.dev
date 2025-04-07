@@ -8,6 +8,7 @@ import GA from "@/components/common/GA";
 import "./globals.css";
 import "katex/dist/katex.min.css";
 import {ProgressBar, ProgressBarProvider} from "react-transition-progress";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kbotdocs.dev"),
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   },
   description: "카카오톡봇의 정보가 모인 카카오톡봇 문서입니다.",
   openGraph: {
-    siteName: "KBotDocs",
+    siteName: "kbotdocs",
     type: "website",
     locale: "ko-KR",
     images: {
@@ -44,14 +45,6 @@ export const metadata: Metadata = {
     }
   ]
 };
-
-const open_sans = Open_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-  style: ["italic", "normal"],
-  variable: "--font-open-sans"
-});
 
 const pretendard = localFont({
   src: "../public/fonts/PretendardVariable.woff2",
@@ -90,7 +83,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
   return (
     <html suppressHydrationWarning>
     <body
-      className={`${open_sans.variable} ${pretendard.variable} ${cascadia_code_nf.variable} ${cascadia_mono_nf.variable}`}>
+      className={`${pretendard.variable} ${cascadia_code_nf.variable} ${cascadia_mono_nf.variable}`}>
     <ThemeProvider>
       <ProgressBarProvider>
         <ProgressBar className={"fixed top-0 z-[3] h-[2px] bg-[theme(borderColor.emphasis)]"}/>

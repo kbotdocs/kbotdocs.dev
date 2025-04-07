@@ -17,7 +17,7 @@
     --text-description: light-dark(theme("colors.gray.500"), theme("colors.gray.500"));
     --text-noimportance: light-dark(theme("colors.gray.400"), theme("colors.gray.600"));
     --text-blue-default: light-dark(theme("colors.blue.800"), theme("colors.blue.100"));
-    --text-blue-layer1: light-dark(theme("colors.blue.700"), theme("colors.blue.200"));
+    --text-blue-layer1: light-dark(theme("colors.blue.700"), theme("colors.blue.400"));
     --text-purple-default: light-dark(theme("colors.purple.800"), theme("colors.purple.100"));
     --text-purple-layer1: light-dark(theme("colors.purple.700"), theme("colors.purple.400"));
     --text-green-default: light-dark(theme("colors.green.900"), theme("colors.green.100"));
@@ -33,9 +33,9 @@
     --bg-layer2: light-dark(theme("colors.gray.100"), theme("colors.gray.800"));
     --bg-layer2-hover: light-dark(theme("colors.gray.200"), theme("colors.gray.700"));
     --bg-blue-default: light-dark(theme("colors.blue.50"), theme("colors.blue.950"));
-    --bg-blue-default-hover: light-dark(theme("colors.blue.100"), theme("colors.blue.800"));
-    --bg-blue-layer1: light-dark(theme("colors.blue.100"), theme("colors.blue.800"));
-    --bg-blue-layer1-hover: light-dark(theme("colors.blue.200"), theme("colors.blue.700"));
+    --bg-blue-default-hover: light-dark(theme("colors.blue.100"), theme("colors.blue.900"));
+    --bg-blue-layer1: light-dark(theme("colors.blue.100"), theme("colors.blue.900"));
+    --bg-blue-layer1-hover: light-dark(theme("colors.blue.200"), theme("colors.blue.800"));
     --bg-purple-default: light-dark(theme("colors.purple.50"), theme("colors.purple.950"));
     --bg-purple-default-hover: light-dark(theme("colors.purple.100"), theme("colors.purple.800"));
     --bg-purple-layer1: light-dark(theme("colors.purple.100"), theme("colors.purple.800"));
@@ -119,31 +119,31 @@
   }
 
   body {
-    @apply text-base text-default font-sans bg-default transition-[background-color] duration-default;
+    @apply text-base text-default font-sans bg-default;
   }
 
   h1 {
-    @apply text-2xl font-bold break-words;
+    @apply text-3xl font-[600] break-words;
   }
 
   h2 {
-    @apply text-xl font-bold break-words;
+    @apply text-2xl font-[600] break-words;
   }
 
   h3 {
-    @apply text-lg font-bold break-words;
+    @apply text-xl font-[600] break-words;
   }
 
   h4 {
-    @apply text-md font-bold break-words;
+    @apply text-lg font-bold break-words;
   }
 
   h5 {
-    @apply text-base font-bold break-words;
+    @apply text-md font-bold break-words;
   }
 
   h6 {
-    @apply text-sm font-bold break-words;
+    @apply text-base font-bold break-words;
   }
 
   ul {

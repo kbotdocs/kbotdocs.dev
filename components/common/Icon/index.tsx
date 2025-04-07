@@ -27,6 +27,7 @@ import EspanolIcon from "@/public/svg/EspanolIcon.svg";
 import ExperimentalIcon from "@/public/svg/ExperimentalIcon.svg";
 import FileIcon from "@/public/svg/FileIcon.svg";
 import FolderIcon from "@/public/svg/FolderIcon.svg";
+import GithubIcon from "@/public/svg/GithubIcon.svg";
 import HamburgerButtonIcon from "@/public/svg/HamburgerButtonIcon.svg";
 import HomeIcon from "@/public/svg/HomeIcon.svg";
 import InformationIcon from "@/public/svg/InformationIcon.svg";
@@ -64,75 +65,76 @@ import WarningFillIcon from "@/public/svg/WarningFillIcon.svg";
 import WindowsIcon from "@/public/svg/WindowsIcon.svg";
 
 interface IIcon extends SVGAttributes<HTMLOrSVGElement> {
-    icon: Icons;
+  icon: Icons;
 }
 
 export default function Icon({icon, ...p}: IIcon) {
-    const IconDic: { [iconName in Icons]: React.ReactNode } = {
-        AccountIcon: <AccountIcon {...p} />,
-        AppearanceIcon: <AppearanceIcon {...p} />,
-        ArrowIcon: <ArrowIcon {...p} />,
-        AutoReplyBotIcon: <AutoReplyBotIcon {...p} />,
-        BlogIcon: <BlogIcon {...p} />,
-        BugIcon: <BugIcon {...p} />,
-        CalendarIcon: <CalendarIcon {...p} />,
-        CancelFillIcon: <CancelFillIcon {...p} />,
-        CancelIcon: <CancelIcon {...p} />,
-        CheckIcon: <CheckIcon {...p} />,
-        CopyIcon: <CopyIcon {...p} />,
-        DangerIcon: <DangerIcon {...p} />,
-        DangerFillIcon: <DangerFillIcon {...p} />,
-        DarkIcon: <DarkIcon {...p} />,
-        DeprecatedIcon: <DeprecatedIcon {...p} />,
-        DesktopIcon: <DesktopIcon {...p} />,
-        DevIcon: <DevIcon {...p} />,
-        DonateIcon: <DonateIcon {...p} />,
-        DownloadIcon: <DownloadIcon {...p} />,
-        DragFileIcon: <DragFileIcon {...p} />,
-        EditIcon: <EditIcon {...p} />,
-        EnglishIcon: <EnglishIcon {...p} />,
-        EspanolIcon: <EspanolIcon {...p} />,
-        ExperimentalIcon: <ExperimentalIcon {...p} />,
-        FileIcon: <FileIcon {...p} />,
-        FolderIcon: <FolderIcon {...p} />,
-        HamburgerButtonIcon: <HamburgerButtonIcon {...p} />,
-        HomeIcon: <HomeIcon {...p} />,
-        InformationIcon: <InformationIcon {...p} />,
-        InformationFillIcon: <InformationFillIcon {...p} />,
-        JapaneseIcon: <JapaneseIcon {...p} />,
-        KoreanIcon: <KoreanIcon {...p} />,
-        LaptopIcon: <LaptopIcon {...p} />,
-        LightIcon: <LightIcon {...p} />,
-        LinkIcon: <LinkIcon {...p} />,
-        MarkerIcon: <MarkerIcon {...p} />,
-        MessengerbotRIcon: <MessengerbotRIcon {...p} />,
-        MobileIcon: <MobileIcon {...p} />,
-        MoreIcon: <MoreIcon {...p} />,
-        NolboIcon: <NolboIcon {...p} />,
-        NonStandardIcon: <NonStandardIcon {...p} />,
-        PartialFillIcon: <PartialFillIcon {...p} />,
-        PartialIcon: <PartialIcon {...p} />,
-        PidocIcon: <PidocIcon {...p} />,
-        PostIcon: <PostIcon {...p} />,
-        ReactIcon: <ReactIcon {...p} />,
-        SearchIcon: <SearchIcon {...p} />,
-        SeeIcon: <SeeIcon {...p} />,
-        SettingsIcon: <SettingsIcon {...p} />,
-        SpeedIcon: <SpeedIcon {...p} />,
-        StandardIcon: <StandardIcon {...p} />,
-        StarLightIcon: <StarLightIcon {...p} />,
-        SuccessIcon: <SuccessIcon {...p} />,
-        SuccessFillIcon: <SuccessFillIcon {...p} />,
-        SystemThemeIcon: <SystemThemeIcon {...p} />,
-        TabletIcon: <TabletIcon {...p} />,
-        TypescriptIcon: <TypescriptIcon {...p} />,
-        UploadIcon: <UploadIcon {...p} />,
-        WarningIcon: <WarningIcon {...p}  />,
-        WarningFillIcon: <WarningFillIcon {...p}  />,
-        WindowsIcon: <WindowsIcon {...p} />
-    };
+  const IconDic: { [iconName in Icons]: React.ReactNode } = {
+    AccountIcon: <AccountIcon {...p} />,
+    AppearanceIcon: <AppearanceIcon {...p} />,
+    ArrowIcon: <ArrowIcon {...p} />,
+    AutoReplyBotIcon: <AutoReplyBotIcon {...p} />,
+    BlogIcon: <BlogIcon {...p} />,
+    BugIcon: <BugIcon {...p} />,
+    CalendarIcon: <CalendarIcon {...p} />,
+    CancelFillIcon: <CancelFillIcon {...p} />,
+    CancelIcon: <CancelIcon {...p} />,
+    CheckIcon: <CheckIcon {...p} />,
+    CopyIcon: <CopyIcon {...p} />,
+    DangerIcon: <DangerIcon {...p} />,
+    DangerFillIcon: <DangerFillIcon {...p} />,
+    DarkIcon: <DarkIcon {...p} />,
+    DeprecatedIcon: <DeprecatedIcon {...p} />,
+    DesktopIcon: <DesktopIcon {...p} />,
+    DevIcon: <DevIcon {...p} />,
+    DonateIcon: <DonateIcon {...p} />,
+    DownloadIcon: <DownloadIcon {...p} />,
+    DragFileIcon: <DragFileIcon {...p} />,
+    EditIcon: <EditIcon {...p} />,
+    EnglishIcon: <EnglishIcon {...p} />,
+    EspanolIcon: <EspanolIcon {...p} />,
+    ExperimentalIcon: <ExperimentalIcon {...p} />,
+    FileIcon: <FileIcon {...p} />,
+    FolderIcon: <FolderIcon {...p} />,
+    GithubIcon: <GithubIcon {...p} />,
+    HamburgerButtonIcon: <HamburgerButtonIcon {...p} />,
+    HomeIcon: <HomeIcon {...p} />,
+    InformationIcon: <InformationIcon {...p} />,
+    InformationFillIcon: <InformationFillIcon {...p} />,
+    JapaneseIcon: <JapaneseIcon {...p} />,
+    KoreanIcon: <KoreanIcon {...p} />,
+    LaptopIcon: <LaptopIcon {...p} />,
+    LightIcon: <LightIcon {...p} />,
+    LinkIcon: <LinkIcon {...p} />,
+    MarkerIcon: <MarkerIcon {...p} />,
+    MessengerbotRIcon: <MessengerbotRIcon {...p} />,
+    MobileIcon: <MobileIcon {...p} />,
+    MoreIcon: <MoreIcon {...p} />,
+    NolboIcon: <NolboIcon {...p} />,
+    NonStandardIcon: <NonStandardIcon {...p} />,
+    PartialFillIcon: <PartialFillIcon {...p} />,
+    PartialIcon: <PartialIcon {...p} />,
+    PidocIcon: <PidocIcon {...p} />,
+    PostIcon: <PostIcon {...p} />,
+    ReactIcon: <ReactIcon {...p} />,
+    SearchIcon: <SearchIcon {...p} />,
+    SeeIcon: <SeeIcon {...p} />,
+    SettingsIcon: <SettingsIcon {...p} />,
+    SpeedIcon: <SpeedIcon {...p} />,
+    StandardIcon: <StandardIcon {...p} />,
+    StarLightIcon: <StarLightIcon {...p} />,
+    SuccessIcon: <SuccessIcon {...p} />,
+    SuccessFillIcon: <SuccessFillIcon {...p} />,
+    SystemThemeIcon: <SystemThemeIcon {...p} />,
+    TabletIcon: <TabletIcon {...p} />,
+    TypescriptIcon: <TypescriptIcon {...p} />,
+    UploadIcon: <UploadIcon {...p} />,
+    WarningIcon: <WarningIcon {...p}  />,
+    WarningFillIcon: <WarningFillIcon {...p}  />,
+    WindowsIcon: <WindowsIcon {...p} />
+  };
 
-    return (
-        IconDic[icon]
-    );
+  return (
+    IconDic[icon]
+  );
 }

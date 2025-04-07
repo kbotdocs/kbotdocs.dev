@@ -1,61 +1,53 @@
-import Contributors from "@/components/common/Contributors";
 import Guide from "@/public/illust/guide.svg";
 import Reference from "@/public/illust/reference.svg";
 import {Docs} from "@/constants/docs";
-import IconButton from "../components/common/IconButton";
 
-<div>
-  <div className={"flex justify-center mt-header-h px-screen-x-default md:px-screen-x-md"}>
-    <div
-      className={"relative w-full md:max-w-[952px]"}>
-      <main className={"flex flex-col gap-[32px] py-header-main overflow-auto"}>
-        <Section>
-          # KBotDocs
-
-          프로그래밍 및 카카오톡봇 학습을 위한 자습서와 레거시 API, API2 등의 명세서를 제공하는 카카오톡봇 문서입니다.
-
-          <div className={"grid grid-cols-1 gap-[16px] md:grid-cols-2"}>
-            <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
-              <div className={"leading-snug"}>
-                <div className={"flex items-center gap-[8px]"}>
-                  <Guide className={"w-[1.25rem] h-[1.25rem]"}/>
-                  <h3>자습서</h3>
-                </div>
-                <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>프로그래밍 및 카카오톡봇 학습을 위한 자습서</p>
-              </div>
-              <div className={"ml-[calc(1.25rem+8px)]"}>
-                - [RhinoJS 기초 자습서](/learn/rhino/basic)
-              </div>
-            </div>
-            <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
-              <div className={"leading-snug"}>
-                <div className={"flex items-center gap-[8px]"}>
-                  <Reference className={"w-[1.25rem] h-[1.25rem]"}/>
-                  <h3>레퍼런스</h3>
-                </div>
-                <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>카카오톡봇 API의 명세서</p>
-              </div>
-              <div className={"ml-[calc(1.25rem+8px)]"}>
-                - [레거시 API](/reference/legacy)
-                - [API2](/reference/api2)
-                - [StarLight](/reference/starlight)
-              </div>
-            </div>
-          </div>
-        </Section>
-        <Section>
-          ## 기여
-
-          카카오톡봇 문서는 [Github 리포지토리](https://github.com/kbotdocs/kbotdocs.dev)의 Issues, Pull Request를 통해 기여할 수 있습니다. 문서의
-          내용 추가, 수정뿐만 아니라 사소한 오탈자 수정/제보 또한 큰 도움이 됩니다.
-
-          <Section>
-            ### 기여자
-
-            <Contributors/>
-          </Section>
-        </Section>
-      </main>
+<main className={"flex flex-col items-center gap-[32px] pb-header-main"}>
+  <div className={"mt-header-h px-screen-x-default bg-[#020202] text-gray-50 w-full h-[512px] md:px-screen-x-md"}>
+    <div className={"flex flex-col justify-center gap-[32px] mx-auto box-border h-full bg-[right_bottom] bg-[length:225px_auto] md:max-w-[952px] bg-[url(/illust/main_background.svg)] bg-no-repeat md:bg-[right_center] md:bg-[length:auto_auto]"}>
+      <h1 className={"text-4xl font-[100] leading-tight"}>
+        <span className={"font-normal"}>카카오톡봇</span>을 위한 \
+        <span className={"underline decoration-blue-500"}>문서</span>
+      </h1>
+      <p className={"font-light"}>프로그래밍 및 카카오톡봇 학습을 위한 자습서와 카카오톡봇 API 명세서를 제공하는 카카오톡봇 문서입니다.</p>
     </div>
   </div>
-</div>
+  <div className={"flex flex-col gap-[32px] px-screen-x-default w-full md:px-screen-x-md md:max-w-[952px]"}>
+    <Section>
+      <div className={"grid grid-cols-1 gap-[16px] md:grid-cols-2"}>
+        <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
+          <div className={"leading-snug"}>
+            <div className={"flex items-center gap-[8px]"}>
+              <Guide className={"w-[1.25rem] h-[1.25rem]"}/>
+              <h4>자습서</h4>
+            </div>
+            <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>프로그래밍 및 카카오톡봇 학습을 위한 자습서</p>
+          </div>
+          <div className={"ml-[calc(1.25rem+8px)]"}>
+            - [RhinoJS](/learn/rhino)
+          </div>
+        </div>
+        <div className={"flex flex-col gap-[16px] p-[16px] bg-layer1 rounded-lg"}>
+          <div className={"leading-snug"}>
+            <div className={"flex items-center gap-[8px]"}>
+              <Reference className={"w-[1.25rem] h-[1.25rem]"}/>
+              <h4>레퍼런스</h4>
+            </div>
+            <p className={"text-description ml-[calc(1.25rem+8px)] text-sm"}>카카오톡봇 API의 명세서</p>
+          </div>
+          <div className={"ml-[calc(1.25rem+8px)]"}>
+            - [레거시 API](/reference/legacy)
+            - [API2](/reference/api2)
+            - [StarLight](/reference/starlight)
+          </div>
+        </div>
+      </div>
+    </Section>
+    <Section>
+      ## 기여
+
+      카카오톡봇 문서는 [Github 리포지토리](https://github.com/kbotdocs/kbotdocs.dev)의 Issues, Pull Request를 통해 기여할 수 있습니다. 문서의
+      내용 추가, 수정뿐만 아니라 사소한 오탈자 수정/제보 또한 큰 도움이 됩니다.
+    </Section>
+  </div>
+</main>

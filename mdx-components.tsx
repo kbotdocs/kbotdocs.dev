@@ -18,6 +18,8 @@ import Endpoint from "@/components/common/Endpoint";
 import Param from "@/components/common/Param";
 import ParamList from "@/components/common/ParamList";
 import ParamItem from "@/components/common/ParamItem";
+import Learn from "@/components/common/Learn";
+import LearnRoadmap from "@/components/common/LearnRoadmap";
 
 export const mdxComponents: MDXComponents = {
   h2({children, ...p}) {
@@ -185,6 +187,12 @@ export const mdxComponents: MDXComponents = {
   },
   ParamItem({children, ...p}) {
     return (<ParamItem {...p}>{children}</ParamItem>);
+  },
+  Learn({children, ...p}) {
+    return (<Learn {...p}/>);
+  },
+  LearnRoadmap({children, ...p}) {
+    return (<LearnRoadmap {...p}>{children}</LearnRoadmap>);
   }
 };
 

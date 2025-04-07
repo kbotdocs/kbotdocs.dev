@@ -1,25 +1,34 @@
-interface Doc {
-    label: string;
-    path?: string;
-    hide?: boolean;
-    children?: Doc[];
-}
+type Doc = {
+  [path: string]: DocInfo
+};
+
+type DocInfo = {
+  label: string;
+  path: string;
+  image?: string;
+  description?: string;
+  hide?: boolean;
+};
+
+type DocNav = {
+  [key: string]: (DocCategory | DocInfo)[]
+};
 
 type DocCategory = {
     label: string,
     hide?: boolean,
-    docs: Doc[]
-}
+    docs: DocInfo[]
+};
 
 type DocCompat = {
   data: string,
   feature: string,
-}
+};
 
 type DocMilestone = {
   prev?: string,
   next?: string,
-}
+};
 
 type DocMetadata = {
   title: string,

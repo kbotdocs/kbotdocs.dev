@@ -111,8 +111,8 @@ export default {
       md: "1.125rem",
       lg: "1.25rem",
       xl: "1.5rem",
-      "2xl": "2rem",
-      "3xl": "2.5rem",
+      "2xl": "1.875rem",
+      "3xl": "2.375rem",
       "4xl": "3rem",
       "rel-xs": ".75em",
       "rel-sm": ".875em",
@@ -120,8 +120,8 @@ export default {
       "rel-md": "1.125em",
       "rel-lg": "1.25em",
       "rel-xl": "1.5em",
-      "rel-2xl": "2em",
-      "rel-3xl": "2.5em",
+      "rel-2xl": "1.875em",
+      "rel-3xl": "2.375em",
       "rel-4xl": "3em",
       "codeblock": ".8375rem"
     },
@@ -139,7 +139,7 @@ export default {
       none: "var(--shadow-none)"
     },
     fontFamily: {
-      sans: ["var(--font-open-sans)", "var(--font-pretendard)", "'sans-serif'"],
+      sans: ["var(--font-pretendard)", "'sans-serif'"],
       mono: ["var(--font-cascadia-mono-nf)", "Consolas", "Monaco", "'Andale Mono'", "'Ubuntu Mono'", "monospace"],
       mono_ligature: ["var(--font-cascadia-code-nf)", "Consolas", "Monaco", "'Andale Mono'", "'Ubuntu Mono'", "monospace"]
     },
@@ -216,8 +216,8 @@ export default {
         "heading-content": "64px",
         "main-md": "var(--width-main-md)",
         "header-h": "64px",
-        "sidebar-w-md": "225px",
-        "sidebar-w-lg": "225px",
+        "sidebar-w-md": "256px",
+        "sidebar-w-lg": "256px",
         none: "0"
       },
       padding: {

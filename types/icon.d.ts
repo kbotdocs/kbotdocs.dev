@@ -26,6 +26,7 @@ type Icons =
     "ExperimentalIcon" |
     "FileIcon" |
     "FolderIcon" |
+    "GithubIcon" |
     "HamburgerButtonIcon" |
     "HomeIcon" |
     "InformationIcon" |
