@@ -6,7 +6,7 @@ import {notFound} from "next/navigation";
 import FeatureStatusNoti from "@/components/common/FeatureStatusNoti";
 
 export function generateStaticParams() {
-  return Object.keys(Docs).map(e => e.split("/"));
+  return Object.keys(Docs).map(e => e.replace("/", "").split("/"));
 }
 
 export async function generateMetadata({params}: pageParams) {
