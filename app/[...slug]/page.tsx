@@ -5,10 +5,10 @@ import {Docs} from "@/constants/docs";
 import {notFound} from "next/navigation";
 import FeatureStatusNoti from "@/components/common/FeatureStatusNoti";
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
-  let paramsArr: Param[] = Object.keys(Docs).map(e => e.replace("/", "").split("/"));
+  let paramsArr: Param[] = Object.keys(Docs).map(e => ({
+    slug: e.replace("/", "").split("/")
+  }));
   return paramsArr;
 }
 
