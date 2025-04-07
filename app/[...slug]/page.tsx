@@ -1,4 +1,4 @@
-import {pageParams, getPage} from "@/utils/Page";
+import {Param, pageParams, getPage} from "@/utils/Page";
 import AppCompat from "@/components/common/AppCompat";
 import MileStone from "@/components/common/MileStone";
 import {Docs} from "@/constants/docs";
